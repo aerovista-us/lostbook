@@ -29,11 +29,20 @@ const VIEW = {
   pageAspectFallback: 0.72,
   pageAspectMin: 0.52,
   pageAspectMax: 0.92,
-  pageMinWidthSingle: 260,
+  pageMinWidthSingle: 200,
   pageMinWidthSpread: 240,
-  pageMinHeight: 320,
+  pageMinHeight: 200,
   pageMaxWidthSpread: 680,
-  resizeDebounceMs: 120,
+  deskPadSingle: 0,
+  casePadSingleX: 0,
+  casePadSingleY: 0,
+  shellInsetSingleX: 0,
+  shellInsetSingleY: 0,
+  resizeDebounceMs: 150,
+  orientationDebounceMs: 400,
+  preloadConcurrency: 24,
+  priorityPageCount: 12,
+  chromeIdleMs: 2800,
 };
 
 let pageFlipInstance = null;
@@ -97,6 +106,8 @@ function readPageAspect() {
 }
 
 function measureChromeHeight() {
+  /* Chrome floats over the page in immersive mode — do not shrink the book. */
+  if (document.body.classList.contains("almanac-immersive")) return 0;
   const shell = document.getElementById("almanac-shell");
   if (!shell) return VIEW.chromeEstimate;
   const top = shell.querySelector(".alm-top");
@@ -124,10 +135,39 @@ function wantsSpreadLayout(viewportW, viewportH) {
  * Size the case + pages to fill the viewport.
  * --alm-page-aspect = width ÷ height (portrait). Each page must satisfy 2×width > height (aspect > 0.5).
  */
+function layoutInsets(spread) {
+  if (document.body.classList.contains("almanac-immersive")) {
+    return {
+      deskPad: 0,
+      casePadX: 0,
+      casePadY: 0,
+      shellInsetX: 0,
+      shellInsetY: 0,
+    };
+  }
+  if (!spread) {
+    return {
+      deskPad: VIEW.deskPadSingle,
+      casePadX: VIEW.casePadSingleX,
+      casePadY: VIEW.casePadSingleY,
+      shellInsetX: VIEW.shellInsetSingleX,
+      shellInsetY: VIEW.shellInsetSingleY,
+    };
+  }
+  return {
+    deskPad: VIEW.deskPad,
+    casePadX: VIEW.casePadX,
+    casePadY: VIEW.casePadY,
+    shellInsetX: VIEW.shellInsetX,
+    shellInsetY: VIEW.shellInsetY,
+  };
+}
+
 function computeBookLayout(viewportW, viewportH, spread) {
   const aspect = readPageAspect();
   const chromeH = measureChromeHeight();
-  const pad = VIEW.deskPad * 2;
+  const insets = layoutInsets(spread);
+  const pad = insets.deskPad * 2;
   const availW = viewportW - pad;
   const availH = viewportH - pad;
 
@@ -137,25 +177,25 @@ function computeBookLayout(viewportW, viewportH, spread) {
   let pageH;
 
   if (!spread) {
-    /* Portrait / single-page: fill the screen; page fits inside chrome. */
     caseW = availW;
     caseH = availH;
-    const bookAreaW = caseW - VIEW.casePadX - VIEW.shellInsetX;
-    const bookAreaH = caseH - VIEW.casePadY - VIEW.shellInsetY - chromeH;
+    const bookAreaW = caseW - insets.casePadX - insets.shellInsetX;
+    const bookAreaH = caseH - insets.casePadY - insets.shellInsetY - chromeH;
 
-    pageW = bookAreaW;
-    pageH = Math.floor(pageW / aspect);
-    if (pageH > bookAreaH) {
-      pageH = bookAreaH;
-      pageW = Math.floor(pageH * aspect);
+    /* Height-first: maximize vertical use of the screen. */
+    pageH = bookAreaH;
+    pageW = Math.floor(pageH * aspect);
+    if (pageW > bookAreaW) {
+      pageW = bookAreaW;
+      pageH = Math.floor(pageW / aspect);
     }
-    pageW = Math.max(VIEW.pageMinWidthSingle, pageW);
-    pageH = Math.max(VIEW.pageMinHeight, pageH);
+    pageW = Math.max(VIEW.pageMinWidthSingle, Math.floor(pageW));
+    pageH = Math.max(VIEW.pageMinHeight, Math.floor(pageH));
   } else {
     caseW = availW;
     caseH = availH;
-    const bookAreaW = caseW - VIEW.casePadX - VIEW.shellInsetX;
-    const bookAreaH = caseH - VIEW.casePadY - VIEW.shellInsetY - chromeH;
+    const bookAreaW = caseW - insets.casePadX - insets.shellInsetX;
+    const bookAreaH = caseH - insets.casePadY - insets.shellInsetY - chromeH;
 
     pageH = bookAreaH;
     pageW = pageH * aspect;
@@ -284,6 +324,7 @@ function setChinOpen(chrome, open) {
   if (!chrome?.footer || !chrome?.chinToggle) return;
   chrome.footer.classList.toggle("chin-open", open);
   chrome.chinToggle.setAttribute("aria-expanded", open ? "true" : "false");
+  document.body.classList.toggle("almanac-chrome-visible", open);
 }
 
 function titleForSpec(spec, idx) {
@@ -414,10 +455,86 @@ function normalizePageSpecs(manifest) {
 
 async function loadHtmlContent(spec) {
   if (spec.htmlCached != null) return spec.htmlCached;
-  const res = await fetch(spec.resolved, { cache: "no-store" });
+  const res = await fetch(spec.resolved, { cache: "force-cache" });
   if (!res.ok) throw new Error(`${spec.src} → HTTP ${res.status}`);
   spec.htmlCached = await res.text();
   return spec.htmlCached;
+}
+
+async function preloadSpecsParallel(specs) {
+  const pending = specs.filter((s) => s?.kind === "html" && s.htmlCached == null);
+  const concurrency = VIEW.preloadConcurrency;
+  for (let i = 0; i < pending.length; i += concurrency) {
+    const batch = pending.slice(i, i + concurrency);
+    await Promise.all(
+      batch.map((s) =>
+        loadHtmlContent(s).catch(() => {
+          s.htmlCached = `<div class="fp"><p>Could not load page.</p></div>`;
+        }),
+      ),
+    );
+  }
+}
+
+async function preloadPriorityPages(pageSpecs) {
+  const n = Math.min(VIEW.priorityPageCount, pageSpecs.length);
+  const batch = [];
+  for (let i = 0; i < n; i++) {
+    if (pageSpecs[i]?.kind === "html") batch.push(pageSpecs[i]);
+  }
+  await Promise.all(
+    batch.map((s) =>
+      loadHtmlContent(s).catch(() => {
+        s.htmlCached = `<div class="fp"><p>Could not load page.</p></div>`;
+      }),
+    ),
+  );
+}
+
+function preloadAllPageHtmlBackground(pageSpecs) {
+  void preloadSpecsParallel(pageSpecs.filter((s) => s.kind === "html"));
+}
+
+function createPageElement(spec) {
+  const page = document.createElement("div");
+  page.className = "page";
+  page.dataset.density = spec.cover ? "hard" : "soft";
+  if (spec.cover) page.classList.add("page--cover");
+
+  if (spec.kind === "placeholder") {
+    page.classList.add("page--placeholder");
+    const inner = document.createElement("div");
+    inner.className = "page__placeholder-inner";
+    inner.textContent = spec.title || spec.label;
+    page.appendChild(inner);
+  } else if (spec.kind === "html") {
+    const wrap = document.createElement("div");
+    wrap.className = "page__notes";
+    if (spec.htmlCached != null) {
+      wrap.innerHTML = spec.htmlCached;
+    } else {
+      wrap.innerHTML = `<div class="fp"><p>Page not loaded.</p></div>`;
+    }
+    page.appendChild(wrap);
+  }
+  return page;
+}
+
+/** Templates for fast remount after rotate (no refetch). */
+let pageTemplateCache = null;
+
+function cachePageTemplates(pages) {
+  pageTemplateCache = pages.map((p) => p.cloneNode(true));
+}
+
+function buildPagesFromTemplates() {
+  const frag = document.createDocumentFragment();
+  const pages = pageTemplateCache.map((tpl) => {
+    const clone = tpl.cloneNode(true);
+    frag.appendChild(clone);
+    return clone;
+  });
+  return { frag, pages };
 }
 
 function showEmpty(bookEl, message) {
@@ -428,38 +545,84 @@ function showEmpty(bookEl, message) {
   bookEl.appendChild(wrap);
 }
 
-async function buildPageElements(pageSpecs) {
+async function buildPageElements(pageSpecs, { useTemplateCache = false } = {}) {
+  if (useTemplateCache && pageTemplateCache?.length === pageSpecs.length) {
+    return buildPagesFromTemplates();
+  }
+
+  await preloadSpecsParallel(pageSpecs);
+
   const frag = document.createDocumentFragment();
   const pages = [];
 
   for (let i = 0; i < pageSpecs.length; i++) {
-    const spec = pageSpecs[i];
-    const page = document.createElement("div");
-    page.className = "page";
-    page.dataset.density = spec.cover ? "hard" : "soft";
-    if (spec.cover) page.classList.add("page--cover");
-
-    if (spec.kind === "placeholder") {
-      page.classList.add("page--placeholder");
-      const inner = document.createElement("div");
-      inner.className = "page__placeholder-inner";
-      inner.textContent = spec.title || spec.label;
-      page.appendChild(inner);
-    } else if (spec.kind === "html") {
-      const wrap = document.createElement("div");
-      wrap.className = "page__notes";
-      try {
-        wrap.innerHTML = await loadHtmlContent(spec);
-      } catch (err) {
-        wrap.innerHTML = `<div class="fp"><p>Could not load page: ${String(err.message || err)}</p></div>`;
-      }
-      page.appendChild(wrap);
-    }
-
+    const page = createPageElement(pageSpecs[i]);
     frag.appendChild(page);
     pages.push(page);
   }
+
+  if (!pageTemplateCache) cachePageTemplates(pages);
   return { frag, pages };
+}
+
+function initChromeAutoHide(chrome) {
+  let hideTimer = 0;
+
+  const show = () => {
+    document.body.classList.add("almanac-chrome-visible");
+    window.clearTimeout(hideTimer);
+    if (chrome?.footer?.classList.contains("chin-open")) return;
+    hideTimer = window.setTimeout(() => {
+      if (!chrome?.footer?.classList.contains("chin-open")) {
+        document.body.classList.remove("almanac-chrome-visible");
+      }
+    }, VIEW.chromeIdleMs);
+  };
+
+  const reveal = () => show();
+
+  document.addEventListener("pointerdown", reveal, { passive: true });
+  document.addEventListener("pointermove", reveal, { passive: true });
+  document.addEventListener("keydown", reveal, { passive: true });
+
+  if (chrome?.footer) {
+    chrome.footer.addEventListener(
+      "transitionend",
+      () => {
+        if (chrome.footer.classList.contains("chin-open")) {
+          document.body.classList.add("almanac-chrome-visible");
+          window.clearTimeout(hideTimer);
+        }
+      },
+      { passive: true },
+    );
+  }
+
+  show();
+  return { pulse: show };
+}
+
+function waitForViewportStable(maxMs = 900) {
+  return new Promise((resolve) => {
+    let last = measureViewport();
+    let stableFrames = 0;
+    const start = Date.now();
+
+    const tick = () => {
+      const vp = measureViewport();
+      if (vp.w === last.w && vp.h === last.h) stableFrames += 1;
+      else {
+        stableFrames = 0;
+        last = vp;
+      }
+      if (stableFrames >= 3 || Date.now() - start >= maxMs) {
+        resolve(vp);
+        return;
+      }
+      requestAnimationFrame(tick);
+    };
+    requestAnimationFrame(tick);
+  });
 }
 
 function syncNav(pf, prevBtn, nextBtn) {
@@ -539,7 +702,10 @@ function initMagazine(PageFlip, bookEl, prevBtn, nextBtn, pageSpecs, chrome) {
     }
   };
 
-  async function mountAtPage(startPage = 0) {
+  async function mountAtPage(startPage = 0, { fromResize = false } = {}) {
+    const wasReady = document.body.classList.contains("almanac-ready");
+    if (fromResize) document.body.classList.add("almanac-resizing");
+
     const vp = measureViewport();
     const spread = wantsSpreadLayout(vp.w, vp.h);
     let layout = computeBookLayout(vp.w, vp.h, spread);
@@ -549,7 +715,8 @@ function initMagazine(PageFlip, bookEl, prevBtn, nextBtn, pageSpecs, chrome) {
     await new Promise((resolve) => waitLayout(resolve));
 
     const vp2 = measureViewport();
-    if (spread === wantsSpreadLayout(vp2.w, vp2.h)) {
+    const spread2 = wantsSpreadLayout(vp2.w, vp2.h);
+    if (spread2 === spread) {
       layout = computeBookLayout(vp2.w, vp2.h, spread);
       applyShellLayout(layout);
       await new Promise((resolve) => waitLayout(resolve));
@@ -558,21 +725,39 @@ function initMagazine(PageFlip, bookEl, prevBtn, nextBtn, pageSpecs, chrome) {
     const dims = pageDimsFromLayout(layout);
     lastDimsKey = layoutDimsKey(dims);
 
+    const { frag, pages } = await buildPageElements(pageSpecs, {
+      useTemplateCache: fromResize && pageTemplateCache != null,
+    });
+
     destroyPageFlip(pf);
     pf = null;
     pageFlipInstance = null;
     bookEl.replaceChildren();
-
-    const { frag, pages } = await buildPageElements(pageSpecs);
     bookEl.appendChild(frag);
 
     const safeStart = Math.max(0, Math.min(startPage, pageSpecs.length - 1));
-    pf = new PageFlip(
-      bookEl,
-      buildPageFlipOptions(dims, flippingTime, hasCover, safeStart),
-    );
-    pf.loadFromHTML(pages);
-    pageFlipInstance = pf;
+    const flipOpts = buildPageFlipOptions(dims, flippingTime, hasCover, safeStart);
+    let lastErr = null;
+    for (let attempt = 0; attempt < 2; attempt++) {
+      try {
+        if (attempt > 0) await new Promise((r) => setTimeout(r, 120));
+        pf = new PageFlip(bookEl, flipOpts);
+        pf.loadFromHTML(pages);
+        pageFlipInstance = pf;
+        lastErr = null;
+        break;
+      } catch (err) {
+        lastErr = err;
+        destroyPageFlip(pf);
+        pf = null;
+        pageFlipInstance = null;
+      }
+    }
+    if (lastErr) {
+      console.error("PageFlip init failed", lastErr);
+      document.body.classList.remove("almanac-resizing");
+      throw lastErr;
+    }
 
     const scheduleReflow = () => {
       const ui = pf?.getUI?.();
@@ -580,26 +765,38 @@ function initMagazine(PageFlip, bookEl, prevBtn, nextBtn, pageSpecs, chrome) {
     };
     wirePageImages(bookEl, scheduleReflow);
 
-    document.body.classList.remove("almanac-loading");
-    document.body.classList.add("almanac-ready");
-    const loadingEl = document.getElementById("book-loading");
-    if (loadingEl) loadingEl.remove();
+    if (!wasReady) {
+      document.body.classList.remove("almanac-loading");
+      document.body.classList.add("almanac-ready");
+      const loadingEl = document.getElementById("book-loading");
+      if (loadingEl) loadingEl.remove();
+    }
+
+    document.body.classList.remove("almanac-resizing");
 
     const idx = pf.getCurrentPageIndex();
     syncAll(idx, { collapseOnPageChange: false });
 
-    pf.on("flip", () => {
+    pf.on("flip", (e) => {
+      chromeHide?.pulse?.();
+      const idx = typeof e?.data === "number" ? e.data : pf.getCurrentPageIndex();
+      const spec = pageSpecs[idx];
+      if (spec?.kind === "html" && spec.htmlCached == null) {
+        void loadHtmlContent(spec).then(() => wirePageImages(bookEl, scheduleReflow));
+      }
       syncAll(pf.getCurrentPageIndex());
       wirePageImages(bookEl, scheduleReflow);
       scheduleReflow();
     });
 
     scheduleReflow();
-    suppressRelayoutUntil = Date.now() + 650;
+    suppressRelayoutUntil = Date.now() + 750;
   }
 
   async function relayoutFromResize() {
     if (relayouting || !pf || Date.now() < suppressRelayoutUntil) return;
+
+    await waitForViewportStable();
 
     const vp = measureViewport();
     const spread = wantsSpreadLayout(vp.w, vp.h);
@@ -608,31 +805,51 @@ function initMagazine(PageFlip, bookEl, prevBtn, nextBtn, pageSpecs, chrome) {
     const nextKey = layoutDimsKey(pageDimsFromLayout(layout));
 
     if (newMode === layoutMode && nextKey === lastDimsKey) {
+      applyShellLayout(layout);
       const ui = pf.getUI?.();
       if (ui && typeof ui.update === "function") ui.update();
       return;
     }
 
-    applyShellLayout(layout);
-
     relayouting = true;
     const idx = pf.getCurrentPageIndex();
     try {
-      await mountAtPage(idx);
+      await mountAtPage(idx, { fromResize: true });
+    } catch {
+      /* keep previous book if remount fails */
     } finally {
       relayouting = false;
+      document.body.classList.remove("almanac-resizing");
     }
   }
 
-  const onResize = () => {
+  let orientT = 0;
+  const scheduleRelayout = (delayMs) => {
     window.clearTimeout(resizeT);
     resizeT = window.setTimeout(() => {
       relayoutFromResize();
-    }, VIEW.resizeDebounceMs);
+    }, delayMs);
   };
 
+  const onResize = () => scheduleRelayout(VIEW.resizeDebounceMs);
+
+  const onOrientationChange = () => {
+    suppressRelayoutUntil = Date.now() + 80;
+    window.clearTimeout(orientT);
+    orientT = window.setTimeout(() => {
+      scheduleRelayout(VIEW.orientationDebounceMs);
+    }, 50);
+  };
+
+  const chromeHide = initChromeAutoHide(chrome);
+
   waitLayout(async () => {
+    const loadingEl = document.getElementById("book-loading");
+    if (loadingEl) loadingEl.textContent = "Opening…";
+
+    await preloadPriorityPages(pageSpecs);
     await mountAtPage(0);
+    preloadAllPageHtmlBackground(pageSpecs);
 
     if (!navBound) {
       navBound = true;
@@ -673,7 +890,7 @@ function initMagazine(PageFlip, bookEl, prevBtn, nextBtn, pageSpecs, chrome) {
     }
 
     window.addEventListener("resize", onResize, { passive: true });
-    window.addEventListener("orientationchange", onResize, { passive: true });
+    window.addEventListener("orientationchange", onOrientationChange, { passive: true });
     const vv = window.visualViewport;
     if (vv) {
       vv.addEventListener("resize", onResize, { passive: true });
@@ -682,16 +899,22 @@ function initMagazine(PageFlip, bookEl, prevBtn, nextBtn, pageSpecs, chrome) {
   });
 }
 
+async function fetchManifest() {
+  const r = await fetch(new URL(CONFIG.manifest, window.location.href), { cache: "force-cache" });
+  if (!r.ok) throw new Error(`Manifest HTTP ${r.status}`);
+  return r.json();
+}
+
 async function main() {
   const bookEl = document.getElementById("book");
   const prevBtn = document.getElementById("nav-prev");
   const nextBtn = document.getElementById("nav-next");
 
+  const flipWarm = ensurePageFlip(false).catch(() => null);
+
   let manifest;
   try {
-    const r = await fetch(new URL(CONFIG.manifest, window.location.href), { cache: "no-store" });
-    if (!r.ok) throw new Error(`Manifest HTTP ${r.status}`);
-    manifest = await r.json();
+    [manifest] = await Promise.all([fetchManifest(), flipWarm]);
   } catch (err) {
     showEmpty(
       bookEl,
@@ -703,7 +926,7 @@ async function main() {
   const preferLocalVendor = manifest.preferLocalPageFlip === true;
 
   try {
-    await ensurePageFlip(preferLocalVendor);
+    if (!globalThis.St?.PageFlip) await ensurePageFlip(preferLocalVendor);
   } catch (err) {
     document.body.classList.remove("almanac-loading");
     showEmpty(

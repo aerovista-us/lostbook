@@ -7,9 +7,11 @@
   <title>Things Worth Remembering</title>
   <meta name="description" content="A found field guide for campfires, blackouts, bad roads, and whatever comes after." />
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="preload" href="almanac-manifest.json" as="fetch" crossorigin="anonymous" />
+  <link rel="modulepreload" href="assets/js/almanac.mjs" />
   <link rel="stylesheet" href="assets/css/almanac.css" />
 </head>
-<body class="almanac-loading">
+<body class="almanac-loading almanac-immersive">
   <div id="almanac-desk">
     <p class="alm-open-hint" id="alm-open-hint">
       <strong>Things Worth Remembering</strong> — drag corners to turn · ← → keys
