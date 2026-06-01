@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>Chapter 5 — Escalation and Culture</title>
+  <!-- components/layout/head.html -->
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<link rel="icon" href="favicon.svg" type="image/svg+xml" />
+<link rel="stylesheet" href="assets/css/guide.css">
+
+</head>
+<body>
+  <div class="stage" id="stage">
+    <svg class="bg" id="bg" viewBox="0 0 1400 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+  <defs>
+    <pattern id="grid" width="80" height="80" patternUnits="userSpaceOnUse">
+      <path d="M80 0H0V80" fill="none" stroke="var(--grid1)" stroke-width="2"/>
+      <path d="M40 0V80M0 40H80" fill="none" stroke="var(--grid2)" stroke-width="2"/>
+    </pattern>
+    <filter id="grime" x="-20%" y="-20%" width="140%" height="140%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.015" numOctaves="4" stitchTiles="stitch" result="n"/>
+      <feColorMatrix in="n" type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 .55 0" result="n2"/>
+      <feGaussianBlur stdDeviation="0.6" result="b"/>
+      <feBlend in="SourceGraphic" in2="b" mode="multiply"/>
+      <feBlend in="SourceGraphic" in2="n2" mode="overlay"/>
+    </filter>
+    <radialGradient id="vig" cx="50%" cy="45%" r="75%">
+      <stop offset="0%" stop-color="rgba(0,0,0,0)"/>
+      <stop offset="70%" stop-color="rgba(0,0,0,0.25)"/>
+      <stop offset="100%" stop-color="rgba(0,0,0,0.55)"/>
+    </radialGradient>
+    <filter id="chalk" x="-30%" y="-30%" width="160%" height="160%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch" result="t"/>
+      <feDisplacementMap in="SourceGraphic" in2="t" scale="1.2"/>
+      <feGaussianBlur stdDeviation="0.3"/>
+    </filter>
+    <style>
+      .ink{fill:rgba(235,231,223,.92); font-family: ui-monospace, monospace;}
+      .mark{stroke:rgba(235,231,223,.75); stroke-width:3; fill:none; stroke-linecap:round; stroke-linejoin:round; filter:url(#chalk);}
+      .stamp{fill:rgba(214,181,91,.85); font-weight:900; letter-spacing:.06em;}
+      .haz{fill:none; stroke:rgba(214,181,91,.35); stroke-width:10; stroke-dasharray:28 18; opacity:.7;}
+      .ghost{fill:rgba(235,231,223,.55); font-family: ui-monospace, monospace;}
+    </style>
+  </defs>
+
+  <rect width="1400" height="900" fill="var(--paper)"/>
+  <rect width="1400" height="900" fill="var(--paper2)" opacity=".35"/>
+  <rect width="1400" height="900" fill="url(#grid)" opacity=".85"/>
+  <path class="haz" d="M80 82 H1320"/>
+  <path class="haz" d="M80 828 H1320"/>
+
+  <g opacity=".35">
+    <rect x="68" y="70" width="260" height="40" rx="10" fill="rgba(255,255,255,.06)" stroke="rgba(255,255,255,.10)"/>
+    <circle cx="92" cy="90" r="6" fill="rgba(0,0,0,.45)"/>
+    <circle cx="310" cy="90" r="6" fill="rgba(0,0,0,.45)"/>
+  </g>
+
+  <text x="92" y="105" class="stamp" font-size="18">FIELD MEDIC LEDGER — DIY COMMUNE</text>
+  <g>
+    <text id="bgTitle" x="92" y="150" class="ink" font-size="28" font-weight="900">CHAPTER TITLE</text>
+    <text id="bgSub" x="92" y="178" class="ghost" font-size="14">care routines · community containment · scarce supplies</text>
+    <path class="mark" d="M92 194 C260 184, 470 184, 620 192" opacity=".7"/>
+    <text x="92" y="228" class="ghost" font-size="13" opacity=".9">Rule: track patterns, protect privacy, act early.</text>
+  </g>
+
+  <rect width="1400" height="900" fill="url(#vig)"/>
+  <g filter="url(#grime)"><rect width="1400" height="900" fill="rgba(255,255,255,.001)"/></g>
+</svg>
+
+
+    <div class="topbar" data-ch-title="CHAPTER 5 — ESCALATION AND CULTURE" data-ch-sub="Red flags. How to portray culture & sensitivity when labs exist (or don’t).">
+      <div class="pill">
+        <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center">
+          <a class="btn" href="map.html">← Map</a>
+          <span class="k">CH 05 / 10</span>
+          <span class="k">DIY commune</span>
+        </div>
+        <h1 class="title">Chapter 5 — Escalation and Culture</h1>
+        <p class="sub">Red flags. How to portray culture & sensitivity when labs exist (or don’t).</p>
+      </div>
+
+      <div class="pill">
+        <div style="display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end;align-items:center">
+          <button class="btn" id="btnDrawer">SUPPLY DRAWER</button>
+          <a class='btn' href='chapter-4.html'>← Prev</a>
+          <a class='btn' href='chapter-6.html'>Next →</a>
+        </div>
+        <div class="sub" style="margin-top:6px">Keys: <span class="k">D</span> drawer · <span class="k">R</span> reset view</div>
+      </div>
+    </div>
+
+    <div class="content grid2">
+      <div class="card"><h3 class="h">Red flags (no debate)</h3>
+<div class="fp-tags">
+  <span class="fp-tag">run</span>
+  <span class="fp-tag">face</span>
+  <span class="fp-tag">fever</span>
+</div>
+<ul class="fp-checklist">
+  <li>Red streak toward chest or groin lymph story</li>
+  <li>Can’t open eye, jaw stiff story, neck swelling</li>
+  <li>Person stops eating / confused / child listless</li>
+  <li>Smell + heat + bigger overnight (witness words)</li>
+</ul>
+<div class="fp-callout">Culture talk belongs <b>after</b> run lane — not instead of it.</div>
+<h3 class="h">Labs exist / don’t exist</h3>
+<div class="fp-branch">
+  <strong>No lab</strong>
+  Board says <em>suspected</em> · policy over precision · don’t fake percentages
+</div>
+<div class="fp-branch">
+  <strong>Lab back</strong>
+  Read number to camp in plain words · resist miracle narrative
+</div>
+</div>
+      <div class="card"><div class="fp-scenario">
+  <h4>Face case</h4>
+  <p>Cheek hot, eye slit. Immediate run staging. Wide shot: empty chairs around them.</p>
+</div>
+<div class="fp-scenario">
+  <h4>Culture shame</h4>
+  <p>Someone says “they’re dirty.” Medic redirects to object pipe. Dialogue for stump vote.</p>
+</div>
+<p class="fp-witness">“Sensitivity isn’t silence. It’s saying what we don’t know.”<cite>— policy scratch</cite></p>
+</div>
+    </div>
+
+    <div class="drawer" id="drawer">
+      <div class="card" style="height:100%">
+        <div style="display:flex;justify-content:space-between;gap:10px;align-items:center">
+          <h2 class="h" style="margin:0">SUPPLY DRAWER</h2>
+          <button class="btn" id="btnClose">Close</button>
+        </div>
+        <div class="divider"></div>
+        <ul class="fp-checklist">
+  <li>RUN banner cloth · spare transport cot</li>
+  <li>Fever log · water cup marked</li>
+  <li>Plain-language culture card (prop)</li>
+  <li>Second witness for stump</li>
+</ul>
+
+      </div>
+    </div>
+  </div>
+  <script src="assets/js/guide.js"></script>
+</body>
+</html>

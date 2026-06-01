@@ -1,0 +1,653 @@
+{
+  "title": "Things Worth Remembering",
+  "subtitle": "A Found Field Guide for Campfires, Blackouts, Bad Roads, and Whatever Comes After",
+  "edition": "Found Copy No. 17 \u2014 Lake City / Kootenai",
+  "preferLocalPageFlip": false,
+  "pages": [
+    {
+      "html": "almanac/pages/00_cover.html",
+      "title": "Cover",
+      "category": "",
+      "cover": true
+    },
+    {
+      "html": "almanac/pages/01_opening.html",
+      "title": "Opening rule",
+      "category": "Front matter",
+      "note": "If this book found you, use it. Add to it. Cross out what is wrong. Leave it better than you found it."
+    },
+    {
+      "html": "almanac/pages/02_index.html",
+      "title": "Tab index",
+      "category": "Front matter"
+    },
+    {
+      "html": "almanac/pages/tab_water.html",
+      "title": "Water",
+      "category": "Water",
+      "note": "stained \u00b7 urgent \u00b7 heavily corrected"
+    },
+    {
+      "html": "almanac/pages/water_01.html",
+      "title": "Water First. Always.",
+      "category": "Water",
+      "note": "stained \u00b7 urgent \u00b7 heavily corrected"
+    },
+    {
+      "html": "almanac/pages/water_02.html",
+      "title": "Boil times (copied)",
+      "category": "Water",
+      "note": "stained \u00b7 urgent \u00b7 heavily corrected"
+    },
+    {
+      "html": "almanac/pages/water_03.html",
+      "title": "Mountain Water Can Still Make You Sick",
+      "category": "Water",
+      "note": "stained \u00b7 urgent \u00b7 heavily corrected"
+    },
+    {
+      "html": "almanac/pages/water_04.html",
+      "title": "Cattails \u2014 correction",
+      "category": "Water",
+      "note": "stained \u00b7 urgent \u00b7 heavily corrected"
+    },
+    {
+      "html": "almanac/pages/water_05.html",
+      "title": "Mistake #3 \u2014 The Creek Looked Clean",
+      "category": "Water",
+      "note": "stained \u00b7 urgent \u00b7 heavily corrected"
+    },
+    {
+      "html": "almanac/pages/water_06.html",
+      "title": "Lake & river \u2014 cold water",
+      "category": "Water",
+      "note": "stained \u00b7 urgent \u00b7 heavily corrected"
+    },
+    {
+      "html": "almanac/pages/tab_fire.html",
+      "title": "Fire",
+      "category": "Fire",
+      "note": "burn marks \u00b7 tinder sketches"
+    },
+    {
+      "html": "almanac/pages/fire_01.html",
+      "title": "Tinder honesty",
+      "category": "Fire",
+      "note": "burn marks \u00b7 tinder sketches"
+    },
+    {
+      "html": "almanac/pages/fire_02.html",
+      "title": "Sticker book",
+      "category": "Fire",
+      "note": "burn marks \u00b7 tinder sketches"
+    },
+    {
+      "html": "almanac/pages/tab_shelter.html",
+      "title": "Shelter",
+      "category": "Shelter",
+      "note": "tarp folds \u00b7 cold notes"
+    },
+    {
+      "html": "almanac/pages/shelter_01.html",
+      "title": "Wind first",
+      "category": "Shelter",
+      "note": "tarp folds \u00b7 cold notes"
+    },
+    {
+      "html": "almanac/pages/shelter_02.html",
+      "title": "Do Not Camp In The Draw",
+      "category": "Shelter",
+      "note": "tarp folds \u00b7 cold notes"
+    },
+    {
+      "html": "almanac/pages/shelter_03.html",
+      "title": "Ridge line knot",
+      "category": "Shelter",
+      "note": "tarp folds \u00b7 cold notes"
+    },
+    {
+      "html": "almanac/pages/shelter_04.html",
+      "title": "Mistake #9 \u2014 We Stayed One Night Too Long",
+      "category": "Shelter",
+      "note": "tarp folds \u00b7 cold notes"
+    },
+    {
+      "html": "almanac/pages/tab_food.html",
+      "title": "Food",
+      "category": "Food",
+      "note": "cautious \u00b7 do not eat"
+    },
+    {
+      "html": "almanac/pages/food_01.html",
+      "title": "Food too early",
+      "category": "Food",
+      "note": "cautious \u00b7 do not eat"
+    },
+    {
+      "html": "almanac/pages/food_02.html",
+      "title": "Do not eat this",
+      "category": "Food",
+      "note": "cautious \u00b7 do not eat"
+    },
+    {
+      "html": "almanac/pages/food_03.html",
+      "title": "Grocery list \u2014 jacket pocket",
+      "category": "Food",
+      "note": "cautious \u00b7 do not eat"
+    },
+    {
+      "html": "almanac/pages/tab_medicine.html",
+      "title": "Medicine",
+      "category": "Medicine",
+      "note": "serious \u00b7 cleaner hand \u00b7 ledger scraps"
+    },
+    {
+      "html": "almanac/pages/medicine_01.html",
+      "title": "Watch or run",
+      "category": "Medicine",
+      "note": "serious \u00b7 cleaner hand \u00b7 ledger scraps"
+    },
+    {
+      "html": "almanac/pages/medicine_02.html",
+      "title": "Third dot",
+      "category": "Medicine",
+      "note": "serious \u00b7 cleaner hand \u00b7 ledger scraps"
+    },
+    {
+      "html": "almanac/pages/medicine_03.html",
+      "title": "Mistake #2 \u2014 It Wasn't Food Poisoning",
+      "category": "Medicine",
+      "note": "serious \u00b7 cleaner hand \u00b7 ledger scraps"
+    },
+    {
+      "html": "almanac/pages/medicine_04.html",
+      "title": "Supply left",
+      "category": "Medicine",
+      "note": "serious \u00b7 cleaner hand \u00b7 ledger scraps"
+    },
+    {
+      "html": "almanac/pages/tab_roads.html",
+      "title": "Roads",
+      "category": "Roads",
+      "note": "maps \u00b7 route warnings"
+    },
+    {
+      "html": "almanac/pages/roads_01.html",
+      "title": "Roads Lie After Storms",
+      "category": "Roads",
+      "note": "maps \u00b7 route warnings"
+    },
+    {
+      "html": "almanac/pages/roads_02.html",
+      "title": "Mistake #4 \u2014 We Should Not Have Taken The North Road",
+      "category": "Roads",
+      "note": "maps \u00b7 route warnings"
+    },
+    {
+      "html": "almanac/pages/roads_03.html",
+      "title": "Bridge Marks",
+      "category": "Roads",
+      "note": "maps \u00b7 route warnings"
+    },
+    {
+      "html": "almanac/pages/roads_04.html",
+      "title": "Forest Service Roads Have Two Numbers",
+      "category": "Roads",
+      "note": "maps \u00b7 route warnings"
+    },
+    {
+      "html": "almanac/pages/roads_05.html",
+      "title": "When Cars Stop Being Cars",
+      "category": "Roads",
+      "note": "maps \u00b7 route warnings"
+    },
+    {
+      "html": "almanac/pages/roads_06.html",
+      "title": "Clear Highways Are Not Safe Highways",
+      "category": "Roads",
+      "note": "maps \u00b7 route warnings"
+    },
+    {
+      "html": "almanac/pages/roads_07.html",
+      "title": "Rail Beds and Service Roads",
+      "category": "Roads",
+      "note": "maps \u00b7 route warnings"
+    },
+    {
+      "html": "almanac/pages/roads_08.html",
+      "title": "Route Marks Without Inviting Trouble",
+      "category": "Roads",
+      "note": "maps \u00b7 route warnings"
+    },
+    {
+      "html": "almanac/pages/tab_people.html",
+      "title": "People",
+      "category": "People",
+      "note": "trust \u00b7 trade \u00b7 warnings"
+    },
+    {
+      "html": "almanac/pages/people_01.html",
+      "title": "Trust rules",
+      "category": "People",
+      "note": "trust \u00b7 trade \u00b7 warnings"
+    },
+    {
+      "html": "almanac/pages/people_02.html",
+      "title": "When the room argues",
+      "category": "People",
+      "note": "trust \u00b7 trade \u00b7 warnings"
+    },
+    {
+      "html": "almanac/pages/people_03.html",
+      "title": "Who To Trust (Slowly)",
+      "category": "People",
+      "note": "trust \u00b7 trade \u00b7 warnings"
+    },
+    {
+      "html": "almanac/pages/people_04.html",
+      "title": "The First Lie Is Usually Small",
+      "category": "People",
+      "note": "trust \u00b7 trade \u00b7 warnings"
+    },
+    {
+      "html": "almanac/pages/people_05.html",
+      "title": "The Helpful Stranger Problem",
+      "category": "People",
+      "note": "trust \u00b7 trade \u00b7 warnings"
+    },
+    {
+      "html": "almanac/pages/people_06.html",
+      "title": "Children Notice Everything",
+      "category": "People",
+      "note": "trust \u00b7 trade \u00b7 warnings"
+    },
+    {
+      "html": "almanac/pages/people_07.html",
+      "title": "What Groups Fight About",
+      "category": "People",
+      "note": "trust \u00b7 trade \u00b7 warnings"
+    },
+    {
+      "html": "almanac/pages/people_08.html",
+      "title": "If They Stop Laughing",
+      "category": "People",
+      "note": "trust \u00b7 trade \u00b7 warnings"
+    },
+    {
+      "html": "almanac/pages/people_09.html",
+      "title": "Why The Camp Broke Apart",
+      "category": "People",
+      "note": "trust \u00b7 trade \u00b7 warnings"
+    },
+    {
+      "html": "almanac/pages/people_10.html",
+      "title": "The Wrong Quiet",
+      "category": "People",
+      "note": "trust \u00b7 trade \u00b7 warnings"
+    },
+    {
+      "html": "almanac/pages/people_11.html",
+      "title": "Bears Are Not Villains",
+      "category": "People",
+      "note": "trust \u00b7 trade \u00b7 warnings"
+    },
+    {
+      "html": "almanac/pages/tab_weather.html",
+      "title": "Weather",
+      "category": "Weather",
+      "note": "season signs \u00b7 storm \u00b7 almanac"
+    },
+    {
+      "html": "almanac/pages/weather_01.html",
+      "title": "Storm before dark",
+      "category": "Weather",
+      "note": "season signs \u00b7 storm \u00b7 almanac"
+    },
+    {
+      "html": "almanac/pages/weather_02.html",
+      "title": "Panhandle seasons",
+      "category": "Weather",
+      "note": "season signs \u00b7 storm \u00b7 almanac"
+    },
+    {
+      "html": "almanac/pages/weather_03.html",
+      "title": "Winter Rules Written By People Who Froze First",
+      "category": "Weather",
+      "note": "season signs \u00b7 storm \u00b7 almanac"
+    },
+    {
+      "html": "almanac/pages/weather_04.html",
+      "title": "Smoke Season",
+      "category": "Weather",
+      "note": "season signs \u00b7 storm \u00b7 almanac"
+    },
+    {
+      "html": "almanac/pages/weather_05.html",
+      "title": "Mistake #7 \u2014 The Fire We Thought Was Far Away",
+      "category": "Weather",
+      "note": "season signs \u00b7 storm \u00b7 almanac"
+    },
+    {
+      "html": "almanac/pages/weather_06.html",
+      "title": "Cold Rain Is Worse Than Snow",
+      "category": "Weather",
+      "note": "season signs \u00b7 storm \u00b7 almanac"
+    },
+    {
+      "html": "almanac/pages/weather_07.html",
+      "title": "The Sky Usually Warns You",
+      "category": "Weather",
+      "note": "season signs \u00b7 storm \u00b7 almanac"
+    },
+    {
+      "html": "almanac/pages/weather_08.html",
+      "title": "Wind Carries More Than Weather",
+      "category": "Weather",
+      "note": "season signs \u00b7 storm \u00b7 almanac"
+    },
+    {
+      "html": "almanac/pages/weather_09.html",
+      "title": "First Frost Notes",
+      "category": "Weather",
+      "note": "season signs \u00b7 storm \u00b7 almanac"
+    },
+    {
+      "html": "almanac/pages/weather_10.html",
+      "title": "The Birds Knew Before We Did",
+      "category": "Weather",
+      "note": "season signs \u00b7 storm \u00b7 almanac"
+    },
+    {
+      "html": "almanac/pages/tab_place.html",
+      "title": "Place",
+      "category": "Place",
+      "note": "Lake City \u00b7 Kootenai \u00b7 hidden map"
+    },
+    {
+      "html": "almanac/pages/place_01.html",
+      "title": "Lake City notes",
+      "category": "Place",
+      "note": "Lake City \u00b7 Kootenai \u00b7 hidden map"
+    },
+    {
+      "html": "almanac/pages/place_02.html",
+      "title": "Wind & blackouts",
+      "category": "Place",
+      "note": "Lake City \u00b7 Kootenai \u00b7 hidden map"
+    },
+    {
+      "html": "almanac/pages/place_03.html",
+      "title": "Lake, river, roads",
+      "category": "Place",
+      "note": "Lake City \u00b7 Kootenai \u00b7 hidden map"
+    },
+    {
+      "html": "almanac/pages/place_04.html",
+      "title": "The Lake Doesn't Care",
+      "category": "Place",
+      "note": "Lake City \u00b7 Kootenai \u00b7 hidden map"
+    },
+    {
+      "html": "almanac/pages/place_05.html",
+      "title": "Winter In The Panhandle",
+      "category": "Place",
+      "note": "Lake City \u00b7 Kootenai \u00b7 hidden map"
+    },
+    {
+      "html": "almanac/pages/place_06.html",
+      "title": "Roads Between Here And There",
+      "category": "Place",
+      "note": "Lake City \u00b7 Kootenai \u00b7 hidden map"
+    },
+    {
+      "html": "almanac/pages/place_07.html",
+      "title": "Places People Forgot",
+      "category": "Place",
+      "note": "Lake City \u00b7 Kootenai \u00b7 hidden map"
+    },
+    {
+      "html": "almanac/pages/place_08.html",
+      "title": "Old Logging Roads",
+      "category": "Place",
+      "note": "Lake City \u00b7 Kootenai \u00b7 hidden map"
+    },
+    {
+      "html": "almanac/pages/place_09.html",
+      "title": "Moose Own The Road",
+      "category": "Place",
+      "note": "Lake City \u00b7 Kootenai \u00b7 hidden map"
+    },
+    {
+      "html": "almanac/pages/place_10.html",
+      "title": "Smoke From The South",
+      "category": "Place",
+      "note": "Lake City \u00b7 Kootenai \u00b7 hidden map"
+    },
+    {
+      "html": "almanac/pages/place_11.html",
+      "title": "FS roads \u2014 gate vs map",
+      "category": "Place",
+      "note": "Lake City \u00b7 Kootenai \u00b7 hidden map"
+    },
+    {
+      "html": "almanac/pages/place_12.html",
+      "title": "The fire ring at Bumblebee",
+      "category": "Place",
+      "note": "Lake City \u00b7 Kootenai \u00b7 hidden map"
+    },
+    {
+      "html": "almanac/pages/place_13.html",
+      "title": "Sandpoint & the Ice Machine",
+      "category": "Place",
+      "note": "Lake City \u00b7 Kootenai \u00b7 hidden map"
+    },
+    {
+      "html": "almanac/pages/place_14.html",
+      "title": "The Cabin By The Creek",
+      "category": "Place",
+      "note": "Lake City \u00b7 Kootenai \u00b7 hidden map"
+    },
+    {
+      "html": "almanac/pages/place_15.html",
+      "title": "Spring Runoff Notes",
+      "category": "Place",
+      "note": "Lake City \u00b7 Kootenai \u00b7 hidden map"
+    },
+    {
+      "html": "almanac/pages/place_16.html",
+      "title": "Mistake #11 \u2014 The Ice Was Thinner Than It Looked",
+      "category": "Place",
+      "note": "Lake City \u00b7 Kootenai \u00b7 hidden map"
+    },
+    {
+      "html": "almanac/pages/place_17.html",
+      "title": "Fuel receipt \u2014 Cataldo",
+      "category": "Place",
+      "note": "Lake City \u00b7 Kootenai \u00b7 hidden map"
+    },
+    {
+      "html": "almanac/pages/place_18.html",
+      "title": "Campground permit \u2014 Priest Lake",
+      "category": "Place",
+      "note": "Lake City \u00b7 Kootenai \u00b7 hidden map"
+    },
+    {
+      "html": "almanac/pages/place_19.html",
+      "title": "Torn Forest Service map",
+      "category": "Place",
+      "note": "Lake City \u00b7 Kootenai \u00b7 hidden map"
+    },
+    {
+      "html": "almanac/pages/place_20.html",
+      "title": "Old Yoke's \u2014 Sandpoint",
+      "category": "Place",
+      "note": "Lake City \u00b7 Kootenai \u00b7 hidden map"
+    },
+    {
+      "html": "almanac/pages/tab_tools.html",
+      "title": "Tools",
+      "category": "Tools",
+      "note": "repair hacks \u00b7 trade \u00b7 cordage"
+    },
+    {
+      "html": "almanac/pages/tools_01.html",
+      "title": "One crate",
+      "category": "Tools",
+      "note": "repair hacks \u00b7 trade \u00b7 cordage"
+    },
+    {
+      "html": "almanac/pages/tools_02.html",
+      "title": "Why Everybody Carries Cordage",
+      "category": "Tools",
+      "note": "repair hacks \u00b7 trade \u00b7 cordage"
+    },
+    {
+      "html": "almanac/pages/tools_03.html",
+      "title": "Knot diagram",
+      "category": "Tools",
+      "note": "repair hacks \u00b7 trade \u00b7 cordage"
+    },
+    {
+      "html": "almanac/pages/tools_04.html",
+      "title": "The Forest Gets Quiet First",
+      "category": "Tools",
+      "note": "repair hacks \u00b7 trade \u00b7 cordage"
+    },
+    {
+      "html": "almanac/pages/tab_signals.html",
+      "title": "Signals",
+      "category": "Signals",
+      "note": "whistle \u00b7 lantern \u00b7 flags"
+    },
+    {
+      "html": "almanac/pages/signals_01.html",
+      "title": "Three Means Trouble",
+      "category": "Signals",
+      "note": "whistle \u00b7 lantern \u00b7 flags"
+    },
+    {
+      "html": "almanac/pages/signals_02.html",
+      "title": "A Signal Is A Door",
+      "category": "Signals",
+      "note": "whistle \u00b7 lantern \u00b7 flags"
+    },
+    {
+      "html": "almanac/pages/signals_03.html",
+      "title": "Marks for Strangers",
+      "category": "Signals",
+      "note": "whistle \u00b7 lantern \u00b7 flags"
+    },
+    {
+      "html": "almanac/pages/signals_04.html",
+      "title": "Radio Windows",
+      "category": "Signals",
+      "note": "whistle \u00b7 lantern \u00b7 flags"
+    },
+    {
+      "html": "almanac/pages/signals_05.html",
+      "title": "Mistake #5 \u2014 We Told Too Many People",
+      "category": "Signals",
+      "note": "whistle \u00b7 lantern \u00b7 flags"
+    },
+    {
+      "html": "almanac/pages/signals_06.html",
+      "title": "Do Not Broadcast Everything",
+      "category": "Signals",
+      "note": "whistle \u00b7 lantern \u00b7 flags"
+    },
+    {
+      "html": "almanac/pages/tab_camp.html",
+      "title": "Camp Games",
+      "category": "Camp Games",
+      "note": "companion layer \u00b7 joy \u00b7 memory"
+    },
+    {
+      "html": "almanac/pages/camp_01.html",
+      "title": "After the work is done",
+      "category": "Camp Games",
+      "note": "companion layer \u00b7 joy \u00b7 memory"
+    },
+    {
+      "html": "almanac/pages/camp_02.html",
+      "title": "Huckleberries, Ravens, and Quiet Kids",
+      "category": "Camp Games",
+      "note": "companion layer \u00b7 joy \u00b7 memory"
+    },
+    {
+      "html": "almanac/pages/camp_03.html",
+      "title": "Fishing note",
+      "category": "Camp Games",
+      "note": "companion layer \u00b7 joy \u00b7 memory"
+    },
+    {
+      "html": "almanac/pages/camp_04.html",
+      "title": "Dogs know first",
+      "category": "Camp Games",
+      "note": "companion layer \u00b7 joy \u00b7 memory"
+    },
+    {
+      "html": "almanac/pages/camp_05.html",
+      "title": "Wallace sunrise",
+      "category": "Camp Games",
+      "note": "companion layer \u00b7 joy \u00b7 memory"
+    },
+    {
+      "html": "almanac/pages/camp_06.html",
+      "title": "Library due slip",
+      "category": "Camp Games",
+      "note": "companion layer \u00b7 joy \u00b7 memory"
+    },
+    {
+      "html": "almanac/pages/tab_blank.html",
+      "title": "Blank Pages",
+      "category": "Blank Pages",
+      "note": "yours to fill \u00b7 artifacts tucked in"
+    },
+    {
+      "html": "almanac/pages/blank_01.html",
+      "title": "Field log",
+      "category": "Blank Pages",
+      "note": "yours to fill \u00b7 artifacts tucked in"
+    },
+    {
+      "html": "almanac/pages/blank_02.html",
+      "title": "Pressed fern",
+      "category": "Blank Pages",
+      "note": "yours to fill \u00b7 artifacts tucked in"
+    },
+    {
+      "html": "almanac/pages/blank_03.html",
+      "title": "Child drawing \u2014 moose, cabin, fire",
+      "category": "Blank Pages",
+      "note": "yours to fill \u00b7 artifacts tucked in"
+    },
+    {
+      "html": "almanac/pages/blank_04.html",
+      "title": "Fishing license (bookmark)",
+      "category": "Blank Pages",
+      "note": "yours to fill \u00b7 artifacts tucked in"
+    },
+    {
+      "html": "almanac/pages/blank_05.html",
+      "title": "Owner inscription",
+      "category": "Blank Pages",
+      "note": "yours to fill \u00b7 artifacts tucked in"
+    },
+    {
+      "html": "almanac/pages/tab_appendix.html",
+      "title": "Ledger scraps",
+      "category": "Appendix"
+    },
+    {
+      "html": "almanac/pages/appendix_01.html",
+      "title": "Map edition",
+      "category": "Appendix"
+    },
+    {
+      "html": "almanac/pages/99_back.html",
+      "title": "Back cover",
+      "category": "",
+      "cover": true
+    }
+  ]
+}

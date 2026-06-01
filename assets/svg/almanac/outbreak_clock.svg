@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 520" width="820" height="520" role="img" aria-label="Outbreak clock sketch">
+  <defs>
+    <filter id="rough" x="-25%" y="-25%" width="150%" height="150%" color-interpolation-filters="sRGB">
+      <feTurbulence type="fractalNoise" baseFrequency="0.014 0.03" numOctaves="2" seed="5" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="2.6" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <style>
+      .ink { stroke: #6b4423; stroke-width: 4.2; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+      .thin { stroke-width: 2.4; opacity: .85; }
+      .hot { stroke: #8b3a2a; stroke-width: 4; opacity: .9; }
+      .wash { stroke: rgba(139, 58, 42, 0.18); stroke-width: 22; }
+      .txt { font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 16px; fill: #6b4423; opacity: .85; }
+      .small { font-size: 13px; opacity: .7; }
+    </style>
+  </defs>
+  <g filter="url(#rough)">
+    <circle class="wash" cx="320" cy="270" r="170"/>
+    <circle class="ink" cx="320" cy="270" r="170"/>
+    <circle class="thin ink" cx="320" cy="270" r="132"/>
+
+    <!-- ticks -->
+    <path class="thin ink" d="M320 90 V112"/>
+    <path class="thin ink" d="M500 270 H478"/>
+    <path class="thin ink" d="M320 450 V428"/>
+    <path class="thin ink" d="M140 270 H162"/>
+
+    <!-- hand -->
+    <path class="hot" d="M320 270 L450 205"/>
+    <circle fill="#8b3a2a" cx="320" cy="270" r="10"/>
+
+    <text class="txt" x="86" y="118">H+0</text>
+    <text class="txt small" x="70" y="140">name dots</text>
+    <text class="txt" x="520" y="280">H+6</text>
+    <text class="txt small" x="520" y="302">pipe hunt</text>
+    <text class="txt" x="300" y="500">H+24</text>
+    <text class="txt small" x="270" y="520">stump</text>
+    <text class="txt" x="56" y="292">D+3</text>
+    <text class="txt small" x="44" y="314">policy flip</text>
+
+    <text class="txt" x="560" y="120">third dot</text>
+    <text class="txt small" x="560" y="142">starts clock</text>
+
+    <!-- sidebar note -->
+    <path class="thin ink" d="M560 180 C640 160 750 170 770 220 C788 270 710 310 650 330 C598 346 560 370 560 410"/>
+    <text class="txt small" x="560" y="430">dont blame</text>
+    <text class="txt small" x="560" y="452">before clock</text>
+  </g>
+</svg>

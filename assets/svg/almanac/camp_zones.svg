@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 520" width="860" height="520" role="img" aria-label="Camp zones mini-map sketch">
+  <defs>
+    <filter id="rough" x="-25%" y="-25%" width="150%" height="150%" color-interpolation-filters="sRGB">
+      <feTurbulence type="fractalNoise" baseFrequency="0.015 0.032" numOctaves="2" seed="9" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="2.9" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <style>
+      .ink { stroke: #6b4423; stroke-width: 4; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+      .thin { stroke-width: 2.2; opacity: .85; }
+      .zoneA { fill: rgba(214, 181, 91, 0.18); stroke: #6b4423; stroke-width: 3.2; }
+      .zoneB { fill: rgba(214, 181, 91, 0.10); stroke: #6b4423; stroke-width: 3.2; }
+      .zoneC { fill: rgba(214, 181, 91, 0.06); stroke: #6b4423; stroke-width: 3.2; }
+      .txt { font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 16px; fill: #6b4423; opacity: .85; }
+      .small { font-size: 13px; opacity: .7; }
+      .hot { fill: rgba(139, 58, 42, 0.14); stroke: #8b3a2a; stroke-width: 3; }
+    </style>
+  </defs>
+  <g filter="url(#rough)">
+    <ellipse class="zoneC" cx="390" cy="275" rx="290" ry="190"/>
+    <ellipse class="zoneB" cx="390" cy="275" rx="215" ry="140"/>
+    <ellipse class="zoneA" cx="390" cy="275" rx="145" ry="95"/>
+
+    <path class="thin ink" d="M120 280 C210 330 280 360 390 390"/>
+    <path class="thin ink" d="M390 390 C500 360 580 320 660 250"/>
+    <path class="thin ink" d="M660 250 C600 210 520 190 390 160"/>
+    <path class="thin ink" d="M390 160 C260 190 190 220 120 280"/>
+
+    <circle class="hot" cx="390" cy="275" r="14"/>
+    <circle class="hot" cx="330" cy="245" r="10"/>
+    <circle class="hot" cx="440" cy="310" r="10"/>
+
+    <text class="txt" x="305" y="210">INNER</text>
+    <text class="txt small" x="290" y="230">sleep · medic</text>
+
+    <text class="txt" x="560" y="260">MIDDLE</text>
+    <text class="txt small" x="550" y="280">kitchen · wash</text>
+
+    <text class="txt" x="150" y="320">OUTER</text>
+    <text class="txt small" x="130" y="340">latrine · tool</text>
+
+    <path class="ink" d="M640 110 C710 120 770 170 770 230 C770 290 710 330 640 340"/>
+    <text class="txt" x="620" y="92">wide shot</text>
+    <text class="txt small" x="615" y="112">reads zones</text>
+  </g>
+</svg>

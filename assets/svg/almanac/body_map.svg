@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 520" width="820" height="520" role="img" aria-label="Body map sketch">
+  <defs>
+    <filter id="rough" x="-25%" y="-25%" width="150%" height="150%" color-interpolation-filters="sRGB">
+      <feTurbulence type="fractalNoise" baseFrequency="0.012 0.03" numOctaves="2" seed="7" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="2.8" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <filter id="paper" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.7" numOctaves="3" seed="2" result="t"/>
+      <feColorMatrix in="t" type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 .08 0"/>
+      <feBlend in="SourceGraphic" in2="t" mode="multiply"/>
+    </filter>
+    <style>
+      .ink { stroke: #6b4423; stroke-width: 4.2; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+      .thin { stroke-width: 2.2; opacity: .9; }
+      .dot { fill: rgba(139,58,42,.25); stroke: #8b3a2a; stroke-width: 3; }
+      .dash { stroke-dasharray: 6 8; opacity: .6; }
+      .label { font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 18px; fill: #6b4423; opacity: .75; }
+    </style>
+  </defs>
+
+  <g filter="url(#paper)">
+    <!-- front -->
+    <path class="ink" filter="url(#rough)" d="M185 95
+      C200 58 240 44 270 56
+      C295 32 345 32 370 56
+      C402 44 442 60 455 95
+      C466 132 454 162 440 178
+      C455 196 470 220 470 250
+      C470 310 430 352 420 385
+      C410 420 390 448 350 460
+      C310 472 270 460 250 430
+      C230 400 232 360 224 332
+      C214 300 180 292 170 250
+      C160 210 180 194 200 178
+      C186 160 174 132 185 95 Z"/>
+    <!-- arms -->
+    <path class="ink thin" filter="url(#rough)" d="M205 185 C165 200 150 240 150 280 C150 312 165 340 185 360"/>
+    <path class="ink thin" filter="url(#rough)" d="M435 185 C475 200 490 240 490 280 C490 312 475 340 455 360"/>
+    <!-- legs -->
+    <path class="ink thin" filter="url(#rough)" d="M250 430 C240 460 238 490 252 505"/>
+    <path class="ink thin" filter="url(#rough)" d="M350 460 C360 470 370 492 362 508"/>
+
+    <!-- back -->
+    <path class="ink" filter="url(#rough)" d="M565 95
+      C580 58 620 44 650 56
+      C675 32 725 32 750 56
+      C782 44 822 60 835 95
+      C846 132 834 162 820 178
+      C835 196 850 220 850 250
+      C850 310 810 352 800 385
+      C790 420 770 448 730 460
+      C690 472 650 460 630 430
+      C610 400 612 360 604 332
+      C594 300 560 292 550 250
+      C540 210 560 194 580 178
+      C566 160 554 132 565 95 Z"/>
+    <path class="ink thin dash" filter="url(#rough)" d="M695 78 C695 210 695 300 695 468"/>
+    <path class="ink thin" filter="url(#rough)" d="M585 185 C545 200 530 240 530 280 C530 312 545 340 565 360"/>
+    <path class="ink thin" filter="url(#rough)" d="M815 185 C855 200 870 240 870 280 C870 312 855 340 835 360"/>
+    <path class="ink thin" filter="url(#rough)" d="M630 430 C620 460 618 490 632 505"/>
+    <path class="ink thin" filter="url(#rough)" d="M730 460 C740 470 750 492 742 508"/>
+
+    <!-- lesion dots -->
+    <circle class="dot" filter="url(#rough)" cx="285" cy="240" r="18"/>
+    <circle class="dot" filter="url(#rough)" cx="330" cy="310" r="14"/>
+    <circle class="dot" filter="url(#rough)" cx="265" cy="350" r="12"/>
+
+    <circle class="dot" filter="url(#rough)" cx="675" cy="255" r="16"/>
+    <circle class="dot" filter="url(#rough)" cx="720" cy="340" r="12"/>
+
+    <text class="label" x="235" y="60">front</text>
+    <text class="label" x="630" y="60">back</text>
+  </g>
+</svg>

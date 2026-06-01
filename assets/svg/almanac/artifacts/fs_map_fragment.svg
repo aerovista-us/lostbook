@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 160" role="img" aria-label="Torn map fragment sketch">
+  <path d="M8 8 L200 12 L210 140 L20 152 Z" fill="#ebe2cc" stroke="#5c4f3a" stroke-width="1.2"/>
+  <path d="M200 12 L220 40 L210 140" fill="#d4c4a0" opacity="0.5"/>
+  <text x="24" y="36" font-family="monospace" font-size="8" fill="#5c4f3a">Sec 12 · T37N</text>
+  <path d="M60 80 Q100 60 140 90" fill="none" stroke="#4a6741" stroke-width="1.5" stroke-dasharray="3 2"/>
+  <text x="50" y="110" font-family="cursive" font-size="9" fill="#3a3228">gate sticks</text>
+  <text x="50" y="124" font-family="cursive" font-size="9" fill="#3a3228">upper spur</text>
+  <path d="M150 50 L175 95" stroke="#6b4423" stroke-width="1" marker-end="url(#arr)"/>
+  <defs><marker id="arr" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#6b4423"/></marker></defs>
+  <text x="155" y="48" font-family="cursive" font-size="8" fill="#8b3a2a">?</text>
+</svg>

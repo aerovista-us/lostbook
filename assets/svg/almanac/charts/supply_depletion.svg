@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 520" width="860" height="520" role="img" aria-label="Supply depletion">
+  <defs>
+    <filter id="rough_supply_depletion" x="-25%" y="-25%" width="150%" height="150%" color-interpolation-filters="sRGB">
+      <feTurbulence type="fractalNoise" baseFrequency="0.014 0.032" numOctaves="2" seed="13" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="2.6" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <style>
+      .ink { stroke: #6b4423; stroke-width: 3.8; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+      .area { fill: rgba(214,181,91,0.22); stroke: none; }
+      .dot { fill: #8b3a2a; stroke: #6b4423; stroke-width: 2; }
+      .axis { stroke: #6b4423; stroke-width: 2.6; opacity: .85; }
+      .thresh { stroke: #8b3a2a; stroke-width: 2.4; opacity: .75; }
+      .tick { font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 15px; fill: #6b4423; opacity: .8; }
+      .small { font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 13px; fill: #8b3a2a; opacity: .85; }
+      .axis-label { font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 14px; fill: #6b4423; opacity: .7; }
+      .title { font-family: Georgia, serif; font-size: 22px; fill: #2a2218; font-weight: 700; }
+    </style>
+  </defs>
+  <text class="title" x="72" y="36">Supply depletion</text>
+  <g filter="url(#rough_supply_depletion)">
+    <line x1="72" y1="338.5" x2="812" y2="338.5" class="thresh" stroke-dasharray="8 10"/>
+    <text class="small" x="808" y="330.5402298850575" text-anchor="end">reorder</text>
+    <path class="area" d="M 74.4,84.7 L 258.8,162.4 L 438.1,256.4 L 627.8,324.9 L 813.6,381.3 L 813.6,432.0 L 74.4,432.0 Z"/>
+    <path class="ink" d="M 74.4,84.7 L 258.8,162.4 L 438.1,256.4 L 627.8,324.9 L 813.6,381.3"/>
+    <circle class="dot" cx="74.4" cy="84.7" r="5"/>
+    <text class="tick" x="74.4" y="454" text-anchor="middle">W1</text>
+    <circle class="dot" cx="258.8" cy="162.4" r="5"/>
+    <text class="tick" x="258.8" y="454" text-anchor="middle">W2</text>
+    <circle class="dot" cx="438.1" cy="256.4" r="5"/>
+    <text class="tick" x="438.1" y="454" text-anchor="middle">W3</text>
+    <circle class="dot" cx="627.8" cy="324.9" r="5"/>
+    <text class="tick" x="627.8" y="454" text-anchor="middle">W4</text>
+    <circle class="dot" cx="813.6" cy="381.3" r="5"/>
+    <text class="tick" x="813.6" y="454" text-anchor="middle">W5</text>
+    <line class="axis" x1="72" y1="432" x2="812" y2="432"/>
+    <line class="axis" x1="72" y1="56" x2="72" y2="432"/>
+    <text class="axis-label" x="442" y="496" text-anchor="middle">week</text>
+    <text class="axis-label" transform="translate(22,244) rotate(-90)" text-anchor="middle">rolls left</text>
+  </g>
+</svg>

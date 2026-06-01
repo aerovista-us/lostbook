@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 90" role="img" aria-label="Grocery receipt sketch">
+  <rect width="200" height="90" fill="#f2e6c9" stroke="#5c4f3a" stroke-width="0.8"/>
+  <text x="14" y="24" font-family="monospace" font-size="10" fill="#2a2218" font-weight="bold">YOKE'S</text>
+  <text x="14" y="38" font-family="monospace" font-size="8" fill="#5c4f3a">Sandpoint</text>
+  <text x="14" y="58" font-family="monospace" font-size="8" fill="#3a3228">coffee · socks · tape</text>
+  <text x="14" y="74" font-family="cursive" font-size="9" fill="#6b4423" opacity="0.65">used as bookmark</text>
+</svg>

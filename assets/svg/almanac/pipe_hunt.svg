@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 520" width="860" height="520" role="img" aria-label="Pipe hunt flow sketch">
+  <defs>
+    <filter id="rough" x="-25%" y="-25%" width="150%" height="150%" color-interpolation-filters="sRGB">
+      <feTurbulence type="fractalNoise" baseFrequency="0.015 0.035" numOctaves="2" seed="11" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="3.1" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <style>
+      .ink { stroke: #6b4423; stroke-width: 4; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+      .thin { stroke-width: 2.5; opacity: .9; }
+      .fill { fill: rgba(214, 181, 91, 0.18); stroke: #6b4423; stroke-width: 3.2; }
+      .hot { fill: rgba(139, 58, 42, 0.14); stroke: #8b3a2a; stroke-width: 3.2; }
+      .txt { font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 18px; fill: #6b4423; opacity: .85; }
+      .small { font-size: 14px; opacity: .7; }
+    </style>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12" fill="none" stroke="#6b4423" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+
+  <g filter="url(#rough)">
+    <circle class="hot" cx="130" cy="120" r="42"/>
+    <circle class="hot" cx="130" cy="260" r="42"/>
+    <circle class="hot" cx="130" cy="400" r="42"/>
+    <path class="thin ink" d="M185 120 C250 120 250 120 290 120" marker-end="url(#arrow)"/>
+    <path class="thin ink" d="M185 260 C250 240 250 200 290 190" marker-end="url(#arrow)"/>
+    <path class="thin ink" d="M185 400 C250 390 255 360 290 330" marker-end="url(#arrow)"/>
+
+    <rect class="fill" x="310" y="175" width="240" height="170" rx="18"/>
+    <text class="txt" x="340" y="230">shared</text>
+    <text class="txt" x="340" y="258">PIPE?</text>
+    <text class="txt small" x="340" y="295">object " towel " tool</text>
+
+    <path class="ink" d="M550 255 C620 255 650 255 705 255" marker-end="url(#arrow)"/>
+    <rect class="fill" x="720" y="215" width="120" height="80" rx="14"/>
+    <text class="txt" x="742" y="265">fix</text>
+
+    <path class="thin ink" d="M430 350 C430 430 560 430 640 430" marker-end="url(#arrow)"/>
+    <rect class="fill" x="660" y="390" width="180" height="90" rx="16"/>
+    <text class="txt" x="682" y="432">person</text>
+    <text class="txt small" x="682" y="458">chain?</text>
+
+    <text class="txt small" x="70" y="510">dot A / dot B / dot C  ’  look for the pipe before the villain</text>
+  </g>
+</svg>

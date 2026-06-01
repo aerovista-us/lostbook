@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 520" width="860" height="520" role="img" aria-label="Dots per day">
+  <defs>
+    <filter id="rough_dots_per_day" x="-25%" y="-25%" width="150%" height="150%" color-interpolation-filters="sRGB">
+      <feTurbulence type="fractalNoise" baseFrequency="0.014 0.032" numOctaves="2" seed="13" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="2.6" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <style>
+      .ink { stroke: #6b4423; stroke-width: 3.8; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+      .area { fill: rgba(214,181,91,0.22); stroke: none; }
+      .dot { fill: #8b3a2a; stroke: #6b4423; stroke-width: 2; }
+      .axis { stroke: #6b4423; stroke-width: 2.6; opacity: .85; }
+      .thresh { stroke: #8b3a2a; stroke-width: 2.4; opacity: .75; }
+      .tick { font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 15px; fill: #6b4423; opacity: .8; }
+      .small { font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 13px; fill: #8b3a2a; opacity: .85; }
+      .axis-label { font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 14px; fill: #6b4423; opacity: .7; }
+      .title { font-family: Georgia, serif; font-size: 22px; fill: #2a2218; font-weight: 700; }
+    </style>
+  </defs>
+  <text class="title" x="72" y="36">Dots per day</text>
+  <g filter="url(#rough_dots_per_day)">
+    <line x1="72" y1="81.9" x2="812" y2="81.9" class="thresh" stroke-dasharray="8 10"/>
+    <text class="small" x="808" y="73.93103448275863" text-anchor="end">clock</text>
+    <path class="ink" d="M 74.4,408.8 L 197.2,297.5 L 314.8,296.9 L 442.8,189.8 L 566.9,84.1 L 687.2,188.2 L 814.1,297.2"/>
+    <circle class="dot" cx="74.4" cy="408.8" r="5"/>
+    <text class="tick" x="74.4" y="454" text-anchor="middle">Mon</text>
+    <circle class="dot" cx="197.2" cy="297.5" r="5"/>
+    <text class="tick" x="197.2" y="454" text-anchor="middle">Tue</text>
+    <circle class="dot" cx="314.8" cy="296.9" r="5"/>
+    <text class="tick" x="314.8" y="454" text-anchor="middle">Wed</text>
+    <circle class="dot" cx="442.8" cy="189.8" r="5"/>
+    <text class="tick" x="442.8" y="454" text-anchor="middle">Thu</text>
+    <circle class="dot" cx="566.9" cy="84.1" r="5"/>
+    <text class="tick" x="566.9" y="454" text-anchor="middle">Fri</text>
+    <circle class="dot" cx="687.2" cy="188.2" r="5"/>
+    <text class="tick" x="687.2" y="454" text-anchor="middle">Sat</text>
+    <circle class="dot" cx="814.1" cy="297.2" r="5"/>
+    <text class="tick" x="814.1" y="454" text-anchor="middle">Sun</text>
+    <line class="axis" x1="72" y1="432" x2="812" y2="432"/>
+    <line class="axis" x1="72" y1="56" x2="72" y2="432"/>
+    <text class="axis-label" x="442" y="496" text-anchor="middle">day</text>
+    <text class="axis-label" transform="translate(22,244) rotate(-90)" text-anchor="middle">new dots</text>
+  </g>
+</svg>

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 100" role="img" aria-label="Pressed fern sketch">
+  <ellipse cx="80" cy="50" rx="70" ry="38" fill="rgba(74,103,65,0.12)" stroke="rgba(74,103,65,0.35)" stroke-width="1"/>
+  <path d="M80 85 L80 20" stroke="#4a6741" stroke-width="1.2" opacity="0.6"/>
+  <path d="M80 70 Q50 55 35 45 M80 60 Q110 50 125 42 M80 48 Q45 35 30 28 M80 38 Q115 28 130 22" fill="none" stroke="#4a6741" stroke-width="0.9" opacity="0.55"/>
+  <ellipse cx="55" cy="62" rx="18" ry="8" fill="rgba(74,103,65,0.15)" transform="rotate(-25 55 62)"/>
+  <ellipse cx="105" cy="58" rx="16" ry="7" fill="rgba(74,103,65,0.12)" transform="rotate(20 105 58)"/>
+</svg>

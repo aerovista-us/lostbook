@@ -1,0 +1,134 @@
+{
+  "name": "Field Medic Ledger \u2014 DIY Commune",
+  "version": "0.2.0",
+  "generated_utc": "2026-02-18T22:52:47.892755Z",
+  "chapters": [
+    {
+      "id": "ch01",
+      "num": 1,
+      "title": "Chapter 1 \u2014 Identify the Threat",
+      "subtitle": "Boil vs abscess vs look-alikes. Label fast. Decide \u2018watch\u2019 or \u2018run.\u2019",
+      "file": "chapter-1.html"
+    },
+    {
+      "id": "ch02",
+      "num": 2,
+      "title": "Chapter 2 \u2014 Spread Control",
+      "subtitle": "Outbreak rules: cover, separate, wash priorities, no shared towels/razors.",
+      "file": "chapter-2.html"
+    },
+    {
+      "id": "ch03",
+      "num": 3,
+      "title": "Chapter 3 \u2014 Pressure and Recurrence",
+      "subtitle": "What \u2018popped\u2019 can still mean. Pocket vs channel. Escalation signs.",
+      "file": "chapter-3.html"
+    },
+    {
+      "id": "ch04",
+      "num": 4,
+      "title": "Chapter 4 \u2014 Aftercare and Logs",
+      "subtitle": "Wrap, replace, record. Body-map + heat log. Routine as medicine.",
+      "file": "chapter-4.html"
+    },
+    {
+      "id": "ch05",
+      "num": 5,
+      "title": "Chapter 5 \u2014 Escalation and Culture",
+      "subtitle": "Red flags. How to portray culture & sensitivity when labs exist (or don\u2019t).",
+      "file": "chapter-5.html"
+    },
+    {
+      "id": "ch06",
+      "num": 6,
+      "title": "Chapter 6 \u2014 Differential Triage",
+      "subtitle": "When it\u2019s not bacterial: fungus, viral, dermatitis, cysts, HS patterns.",
+      "file": "chapter-6.html"
+    },
+    {
+      "id": "ch07",
+      "num": 7,
+      "title": "Chapter 7 \u2014 Antimicrobials in the Ruins",
+      "subtitle": "Topical vs oral as story logic. Stewardship under scarcity.",
+      "file": "chapter-7.html"
+    },
+    {
+      "id": "ch08",
+      "num": 8,
+      "title": "Chapter 8 \u2014 Community Containment Protocol",
+      "subtitle": "Camp policy, laundry board, gear tagging, household control.",
+      "file": "chapter-8.html"
+    },
+    {
+      "id": "ch09",
+      "num": 9,
+      "title": "Chapter 9 \u2014 High-Risk Cases",
+      "subtitle": "Face/eye, diabetes, immune suppression, kids. When small becomes big.",
+      "file": "chapter-9.html"
+    },
+    {
+      "id": "ch10",
+      "num": 10,
+      "title": "Chapter 10 \u2014 Case Files and Dialog Seeds",
+      "subtitle": "Scenario cards to drive plot: recurrence, blame, policy shifts, hard calls.",
+      "file": "chapter-10.html"
+    }
+  ],
+  "sections": [
+    {
+      "id": "sec_overview",
+      "name": "Concept Overview",
+      "path": "components/sections/sec_overview.html"
+    },
+    {
+      "id": "sec_style",
+      "name": "Art Direction Style Guide",
+      "path": "components/sections/sec_style.html"
+    },
+    {
+      "id": "sec_blueprint",
+      "name": "Chapter Blueprint",
+      "path": "components/sections/sec_blueprint.html"
+    },
+    {
+      "id": "sec_props",
+      "name": "Prop & Set Dressing Master List",
+      "path": "components/sections/sec_props.html"
+    },
+    {
+      "id": "sec_tone",
+      "name": "Tone & Dialogue",
+      "path": "components/sections/sec_tone.html"
+    },
+    {
+      "id": "sec_safety",
+      "name": "Safety & Realism Boundaries",
+      "path": "components/sections/sec_safety.html"
+    },
+    {
+      "id": "sec_structure",
+      "name": "Site Structure Spec",
+      "path": "components/sections/sec_structure.html"
+    },
+    {
+      "id": "tmpl_chapter",
+      "name": "Template \u2014 Chapter Notes Packet",
+      "path": "components/sections/tmpl_chapter_note.html"
+    },
+    {
+      "id": "tmpl_sketch",
+      "name": "Template \u2014 Sketch Panel Brief",
+      "path": "components/sections/tmpl_sketch_panel.html"
+    },
+    {
+      "id": "tmpl_board",
+      "name": "Template \u2014 Outbreak Board (DIY Commune)",
+      "path": "components/sections/tmpl_outbreak_board_diy.html"
+    }
+  ],
+  "plug_and_play": {
+    "includes": "Use data-include to inject partial HTML.",
+    "chapter_partials": "Edit components/chapters/chNN_left.html and chNN_right.html.",
+    "drawer_partials": "Edit components/drawers/chNN_drawer.html per chapter."
+  }
+}

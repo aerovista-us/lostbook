@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="color-scheme" content="dark light" />
+  <title>Things Worth Remembering</title>
+  <meta name="description" content="A found field guide for campfires, blackouts, bad roads, and whatever comes after." />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="assets/css/almanac.css" />
+</head>
+<body class="almanac-loading">
+  <div id="almanac-desk">
+    <p class="alm-open-hint" id="alm-open-hint">
+      <strong>Things Worth Remembering</strong> — drag corners to turn · ← → keys
+    </p>
+    <div id="almanac-case" aria-label="Found field notebook">
+      <div class="book-corner book-corner--tl" aria-hidden="true"></div>
+      <div class="book-corner book-corner--tr" aria-hidden="true"></div>
+      <div class="book-corner book-corner--bl" aria-hidden="true"></div>
+      <div class="book-corner book-corner--br" aria-hidden="true"></div>
+      <div id="almanac-shell">
+        <header class="alm-chrome alm-top">
+          <a href="map.html">← Map ledger</a>
+          <div class="alm-top__meta">
+            <span id="alm-meta">Things Worth Remembering</span>
+            <span class="alm-top__spread" id="alm-spread"></span>
+          </div>
+        </header>
+
+        <div id="book" aria-label="Notebook pages">
+          <p class="book-loading" id="book-loading">Opening worn copy…</p>
+        </div>
+
+        <footer class="alm-chrome alm-foot" id="alm-footer">
+          <div class="alm-foot__bar">
+            <button type="button" class="alm-nav" id="nav-prev" hidden aria-label="Previous page">‹</button>
+            <button type="button" class="alm-chin-toggle" id="alm-chin-toggle" aria-expanded="false" aria-controls="alm-chin-panel">
+              <span class="alm-chin-toggle__title" id="alm-chin-summary">Spread</span>
+              <span class="alm-chin-toggle__hint" id="alm-chin-hint">Drag a corner to turn · ← → keys</span>
+            </button>
+            <button type="button" class="alm-nav" id="nav-next" hidden aria-label="Next page">›</button>
+          </div>
+          <div class="alm-chin-panel" id="alm-chin-panel" role="region" aria-label="Page notes">
+            <div class="alm-chin-panel__inner">
+              <p class="alm-chin-note" id="alm-chin-note"></p>
+              <div class="alm-chin-links" id="alm-chin-links"></div>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+  </div>
+  <script type="module" src="assets/js/almanac.mjs"></script>
+</body>
+</html>
