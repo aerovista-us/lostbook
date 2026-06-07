@@ -22,7 +22,10 @@
       <div class="book-corner book-corner--bl" aria-hidden="true"></div>
       <div class="book-corner book-corner--br" aria-hidden="true"></div>
       <div id="almanac-shell">
-        <header class="alm-chrome alm-top">
+        <div class="alm-chrome-hit alm-chrome-hit--top">
+          <button type="button" class="alm-hotspot" id="alm-hotspot-top" aria-label="Show title bar"></button>
+        </div>
+        <header class="alm-chrome alm-top" id="alm-top-bar">
           <a href="map.html">← Map ledger</a>
           <div class="alm-top__meta">
             <span id="alm-meta">Things Worth Remembering</span>
@@ -34,8 +37,11 @@
           <p class="book-loading" id="book-loading">Opening worn copy…</p>
         </div>
 
+        <div class="alm-chrome-hit alm-chrome-hit--bottom">
+          <button type="button" class="alm-hotspot" id="alm-hotspot-bottom" aria-label="Show page controls"></button>
+        </div>
         <footer class="alm-chrome alm-foot" id="alm-footer">
-          <div class="alm-foot__bar">
+          <div class="alm-foot__bar" id="alm-foot-bar">
             <button type="button" class="alm-nav" id="nav-prev" hidden aria-label="Previous page">‹</button>
             <button type="button" class="alm-chin-toggle" id="alm-chin-toggle" aria-expanded="false" aria-controls="alm-chin-panel">
               <span class="alm-chin-toggle__title" id="alm-chin-summary">Spread</span>

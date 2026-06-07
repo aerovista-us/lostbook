@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 480" width="720" height="480" role="img" aria-label="Trucker's hitch knot sketch for tarps">
+  <defs>
+    <filter id="rough" x="-25%" y="-25%" width="150%" height="150%" color-interpolation-filters="sRGB">
+      <feTurbulence type="fractalNoise" baseFrequency="0.014 0.032" numOctaves="2" seed="19" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="2.6" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <style>
+      .rope { stroke: #6b4423; stroke-width: 5; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+      .rope-thin { stroke-width: 3.2; opacity: .88; }
+      .post { fill: rgba(107, 68, 35, 0.12); stroke: #6b4423; stroke-width: 3.5; }
+      .txt { font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 15px; fill: #6b4423; opacity: .82; }
+      .num { font-size: 22px; font-weight: bold; opacity: .9; }
+      .loop { fill: none; stroke: #8b3a2a; stroke-width: 3.5; stroke-dasharray: 5 6; opacity: .75; }
+    </style>
+    <marker id="arr" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10" fill="none" stroke="#6b4423" stroke-width="2.2"/>
+    </marker>
+  </defs>
+
+  <g filter="url(#rough)">
+    <!-- tree / anchor -->
+    <rect class="post" x="48" y="120" width="28" height="220" rx="6"/>
+    <text class="txt" x="36" y="108">tree</text>
+
+    <!-- fixed loop at anchor (step 1) -->
+    <ellipse class="loop" cx="92" cy="200" rx="22" ry="16"/>
+    <text class="txt num" x="118" y="188">1</text>
+    <text class="txt" x="118" y="210">fixed loop</text>
+
+    <!-- standing part down to tarp grommet area -->
+    <path class="rope" d="M92 200 L92 280 L280 320"/>
+
+    <!-- tarp edge -->
+    <path class="rope rope-thin" d="M250 300 L360 330 L470 310"/>
+    <text class="txt" x="360" y="358">tarp / load</text>
+
+    <!-- pulley loop  wraps (step 2) -->
+    <path class="rope" d="M280 320 C340 300 380 260 400 220 C420 180 410 150 380 130"/>
+    <text class="txt num" x="408" y="118">2</text>
+    <text class="txt" x="408" y="138">wrap 3×</text>
+
+    <!-- working end through loop (step 3) -->
+    <path class="rope rope-thin" d="M380 130 C360 110 320 100 290 108 C250 118 230 150 248 188 C268 228 310 250 350 268 L420 300" marker-end="url(#arr)"/>
+    <text class="txt num" x="228" y="92">3</text>
+    <text class="txt" x="228" y="112">pull through</text>
+
+    <!-- hitch tight -->
+    <path class="rope" d="M420 300 L520 340 L600 360"/>
+    <text class="txt" x="520" y="388">tighten · finish w/ half-hitch</text>
+
+    <!-- mechanical advantage hint -->
+    <text class="txt" x="48" y="420" opacity=".65">Mechanical advantage  retighten after wind, before rain.</text>
+  </g>
+</svg>
