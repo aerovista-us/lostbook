@@ -191,6 +191,12 @@
     },
     {
       "html": "almanac/pages/shelter_08.html",
+      "title": "Good campsite #3",
+      "category": "Shelter",
+      "note": "tarp folds \u00b7 cold notes"
+    },
+    {
+      "html": "almanac/pages/shelter_09.html",
       "title": "Mistake #9 \u2014 We Stayed One Night Too Long",
       "category": "Shelter",
       "note": "tarp folds \u00b7 cold notes"
@@ -521,66 +527,78 @@
     },
     {
       "html": "almanac/pages/weather_04.html",
-      "title": "Smoke Season",
+      "title": "Winter means towns",
       "category": "Weather",
       "note": "season signs \u00b7 storm \u00b7 almanac"
     },
     {
       "html": "almanac/pages/weather_05.html",
-      "title": "Mistake #7 \u2014 The Fire We Thought Was Far Away",
+      "title": "Smoke Season",
       "category": "Weather",
       "note": "season signs \u00b7 storm \u00b7 almanac"
     },
     {
       "html": "almanac/pages/weather_06.html",
-      "title": "Mistake #10 \u2014 The Forecast Said Clear",
+      "title": "Fall \u2014 firewood season",
       "category": "Weather",
       "note": "season signs \u00b7 storm \u00b7 almanac"
     },
     {
       "html": "almanac/pages/weather_07.html",
-      "title": "Cold Rain Is Worse Than Snow",
+      "title": "Mistake #7 \u2014 The Fire We Thought Was Far Away",
       "category": "Weather",
       "note": "season signs \u00b7 storm \u00b7 almanac"
     },
     {
       "html": "almanac/pages/weather_08.html",
-      "title": "Storm In The Bones",
+      "title": "Mistake #10 \u2014 The Forecast Said Clear",
       "category": "Weather",
       "note": "season signs \u00b7 storm \u00b7 almanac"
     },
     {
       "html": "almanac/pages/weather_09.html",
-      "title": "Whiteout: Your Eyes Lie",
+      "title": "Cold Rain Is Worse Than Snow",
       "category": "Weather",
       "note": "season signs \u00b7 storm \u00b7 almanac"
     },
     {
       "html": "almanac/pages/weather_10.html",
-      "title": "The Sky Usually Warns You",
+      "title": "Storm In The Bones",
       "category": "Weather",
       "note": "season signs \u00b7 storm \u00b7 almanac"
     },
     {
       "html": "almanac/pages/weather_11.html",
-      "title": "Wind Carries More Than Weather",
+      "title": "Whiteout: Your Eyes Lie",
       "category": "Weather",
       "note": "season signs \u00b7 storm \u00b7 almanac"
     },
     {
       "html": "almanac/pages/weather_12.html",
-      "title": "First Frost Notes",
+      "title": "The Sky Usually Warns You",
       "category": "Weather",
       "note": "season signs \u00b7 storm \u00b7 almanac"
     },
     {
       "html": "almanac/pages/weather_13.html",
-      "title": "The Birds Knew Before We Did",
+      "title": "Wind Carries More Than Weather",
       "category": "Weather",
       "note": "season signs \u00b7 storm \u00b7 almanac"
     },
     {
       "html": "almanac/pages/weather_14.html",
+      "title": "First Frost Notes",
+      "category": "Weather",
+      "note": "season signs \u00b7 storm \u00b7 almanac"
+    },
+    {
+      "html": "almanac/pages/weather_15.html",
+      "title": "The Birds Knew Before We Did",
+      "category": "Weather",
+      "note": "season signs \u00b7 storm \u00b7 almanac"
+    },
+    {
+      "html": "almanac/pages/weather_16.html",
       "title": "Ice on lines, ice on roads",
       "category": "Weather",
       "note": "season signs \u00b7 storm \u00b7 almanac"
@@ -671,66 +689,84 @@
     },
     {
       "html": "almanac/pages/place_14.html",
-      "title": "When The Grid Drops In Winter",
+      "title": "Athol \u2014 never caught them",
       "category": "Place",
       "note": "Lake City \u00b7 Kootenai \u00b7 hidden map"
     },
     {
       "html": "almanac/pages/place_15.html",
-      "title": "Fire ring still here",
+      "title": "When The Grid Drops In Winter",
       "category": "Place",
       "note": "Lake City \u00b7 Kootenai \u00b7 hidden map"
     },
     {
       "html": "almanac/pages/place_16.html",
-      "title": "Priest Lake is deep",
+      "title": "Fire ring still here",
       "category": "Place",
       "note": "Lake City \u00b7 Kootenai \u00b7 hidden map"
     },
     {
       "html": "almanac/pages/place_17.html",
-      "title": "Sandpoint & the Ice Machine",
+      "title": "Good campsite #7",
       "category": "Place",
       "note": "Lake City \u00b7 Kootenai \u00b7 hidden map"
     },
     {
       "html": "almanac/pages/place_18.html",
-      "title": "The Cabin By The Creek",
+      "title": "Priest Lake is deep",
       "category": "Place",
       "note": "Lake City \u00b7 Kootenai \u00b7 hidden map"
     },
     {
       "html": "almanac/pages/place_19.html",
-      "title": "Spring Runoff Notes",
+      "title": "Sandpoint & the Ice Machine",
       "category": "Place",
       "note": "Lake City \u00b7 Kootenai \u00b7 hidden map"
     },
     {
       "html": "almanac/pages/place_20.html",
-      "title": "Mistake #11 \u2014 The Ice Was Thinner Than It Looked",
+      "title": "The Cabin By The Creek",
       "category": "Place",
       "note": "Lake City \u00b7 Kootenai \u00b7 hidden map"
     },
     {
       "html": "almanac/pages/place_21.html",
-      "title": "Fuel receipt \u2014 Cataldo",
+      "title": "Spring Runoff Notes",
       "category": "Place",
       "note": "Lake City \u00b7 Kootenai \u00b7 hidden map"
     },
     {
       "html": "almanac/pages/place_22.html",
-      "title": "Campground permit \u2014 Priest Lake",
+      "title": "Do not camp #1",
       "category": "Place",
       "note": "Lake City \u00b7 Kootenai \u00b7 hidden map"
     },
     {
       "html": "almanac/pages/place_23.html",
-      "title": "Torn Forest Service map",
+      "title": "Mistake #11 \u2014 The Ice Was Thinner Than It Looked",
       "category": "Place",
       "note": "Lake City \u00b7 Kootenai \u00b7 hidden map"
     },
     {
       "html": "almanac/pages/place_24.html",
+      "title": "Fuel receipt \u2014 Cataldo",
+      "category": "Place",
+      "note": "Lake City \u00b7 Kootenai \u00b7 hidden map"
+    },
+    {
+      "html": "almanac/pages/place_25.html",
+      "title": "Campground permit \u2014 Priest Lake",
+      "category": "Place",
+      "note": "Lake City \u00b7 Kootenai \u00b7 hidden map"
+    },
+    {
+      "html": "almanac/pages/place_26.html",
+      "title": "Torn Forest Service map",
+      "category": "Place",
+      "note": "Lake City \u00b7 Kootenai \u00b7 hidden map"
+    },
+    {
+      "html": "almanac/pages/place_27.html",
       "title": "Old Yoke's \u2014 Sandpoint",
       "category": "Place",
       "note": "Lake City \u00b7 Kootenai \u00b7 hidden map"
@@ -941,42 +977,54 @@
     },
     {
       "html": "almanac/pages/blank_02.html",
-      "title": "Child questions",
+      "title": "Heading east",
       "category": "Blank Pages",
       "note": "yours to fill \u00b7 artifacts tucked in"
     },
     {
       "html": "almanac/pages/blank_03.html",
-      "title": "Pass it on",
+      "title": "Child questions",
       "category": "Blank Pages",
       "note": "yours to fill \u00b7 artifacts tucked in"
     },
     {
       "html": "almanac/pages/blank_04.html",
-      "title": "Athol shuttle ticket",
+      "title": "Pass it on",
       "category": "Blank Pages",
       "note": "yours to fill \u00b7 artifacts tucked in"
     },
     {
       "html": "almanac/pages/blank_05.html",
-      "title": "Pressed fern",
+      "title": "Made it",
       "category": "Blank Pages",
       "note": "yours to fill \u00b7 artifacts tucked in"
     },
     {
       "html": "almanac/pages/blank_06.html",
-      "title": "Child drawing \u2014 moose, cabin, fire",
+      "title": "Athol shuttle ticket",
       "category": "Blank Pages",
       "note": "yours to fill \u00b7 artifacts tucked in"
     },
     {
       "html": "almanac/pages/blank_07.html",
-      "title": "Fishing license (bookmark)",
+      "title": "Pressed fern",
       "category": "Blank Pages",
       "note": "yours to fill \u00b7 artifacts tucked in"
     },
     {
       "html": "almanac/pages/blank_08.html",
+      "title": "Child drawing \u2014 moose, cabin, fire",
+      "category": "Blank Pages",
+      "note": "yours to fill \u00b7 artifacts tucked in"
+    },
+    {
+      "html": "almanac/pages/blank_09.html",
+      "title": "Fishing license (bookmark)",
+      "category": "Blank Pages",
+      "note": "yours to fill \u00b7 artifacts tucked in"
+    },
+    {
+      "html": "almanac/pages/blank_10.html",
       "title": "Owner inscription",
       "category": "Blank Pages",
       "note": "yours to fill \u00b7 artifacts tucked in"
