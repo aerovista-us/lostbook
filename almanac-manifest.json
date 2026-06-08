@@ -25,7 +25,8 @@
       "html": "almanac/pages/tab_water.html",
       "title": "Water",
       "category": "Water",
-      "note": "stained \u00b7 urgent \u00b7 heavily corrected"
+      "note": "stained \u00b7 urgent \u00b7 heavily corrected",
+      "tabId": "water"
     },
     {
       "html": "almanac/pages/water_01.html",
@@ -97,7 +98,8 @@
       "html": "almanac/pages/tab_fire.html",
       "title": "Fire",
       "category": "Fire",
-      "note": "burn marks \u00b7 tinder sketches"
+      "note": "burn marks \u00b7 tinder sketches",
+      "tabId": "fire"
     },
     {
       "html": "almanac/pages/fire_01.html",
@@ -145,7 +147,8 @@
       "html": "almanac/pages/tab_shelter.html",
       "title": "Shelter",
       "category": "Shelter",
-      "note": "tarp folds \u00b7 cold notes"
+      "note": "tarp folds \u00b7 cold notes",
+      "tabId": "shelter"
     },
     {
       "html": "almanac/pages/shelter_01.html",
@@ -205,7 +208,8 @@
       "html": "almanac/pages/tab_food.html",
       "title": "Food",
       "category": "Food",
-      "note": "cautious \u00b7 do not eat"
+      "note": "cautious \u00b7 do not eat",
+      "tabId": "food"
     },
     {
       "html": "almanac/pages/food_01.html",
@@ -253,7 +257,8 @@
       "html": "almanac/pages/tab_medicine.html",
       "title": "Medicine",
       "category": "Medicine",
-      "note": "serious \u00b7 cleaner hand \u00b7 ledger scraps"
+      "note": "serious \u00b7 cleaner hand \u00b7 ledger scraps",
+      "tabId": "medicine"
     },
     {
       "html": "almanac/pages/medicine_01.html",
@@ -313,7 +318,8 @@
       "html": "almanac/pages/tab_roads.html",
       "title": "Roads",
       "category": "Roads",
-      "note": "maps \u00b7 route warnings"
+      "note": "maps \u00b7 route warnings",
+      "tabId": "roads"
     },
     {
       "html": "almanac/pages/roads_01.html",
@@ -397,7 +403,8 @@
       "html": "almanac/pages/tab_people.html",
       "title": "People",
       "category": "People",
-      "note": "trust \u00b7 trade \u00b7 warnings"
+      "note": "trust \u00b7 trade \u00b7 warnings",
+      "tabId": "people"
     },
     {
       "html": "almanac/pages/people_01.html",
@@ -505,7 +512,8 @@
       "html": "almanac/pages/tab_weather.html",
       "title": "Weather",
       "category": "Weather",
-      "note": "season signs \u00b7 storm \u00b7 almanac"
+      "note": "season signs \u00b7 storm \u00b7 almanac",
+      "tabId": "weather"
     },
     {
       "html": "almanac/pages/weather_01.html",
@@ -607,7 +615,8 @@
       "html": "almanac/pages/tab_place.html",
       "title": "Place",
       "category": "Place",
-      "note": "Lake City \u00b7 Kootenai \u00b7 hidden map"
+      "note": "Lake City \u00b7 Kootenai \u00b7 hidden map",
+      "tabId": "place"
     },
     {
       "html": "almanac/pages/place_01.html",
@@ -775,7 +784,8 @@
       "html": "almanac/pages/tab_tools.html",
       "title": "Tools",
       "category": "Tools",
-      "note": "repair hacks \u00b7 trade \u00b7 cordage"
+      "note": "repair hacks \u00b7 trade \u00b7 cordage",
+      "tabId": "tools"
     },
     {
       "html": "almanac/pages/tools_01.html",
@@ -835,7 +845,8 @@
       "html": "almanac/pages/tab_signals.html",
       "title": "Signals",
       "category": "Signals",
-      "note": "whistle \u00b7 lantern \u00b7 flags"
+      "note": "whistle \u00b7 lantern \u00b7 flags",
+      "tabId": "signals"
     },
     {
       "html": "almanac/pages/signals_01.html",
@@ -907,7 +918,8 @@
       "html": "almanac/pages/tab_camp.html",
       "title": "Camp Games",
       "category": "Camp Games",
-      "note": "companion layer \u00b7 joy \u00b7 memory"
+      "note": "companion layer \u00b7 joy \u00b7 memory",
+      "tabId": "camp"
     },
     {
       "html": "almanac/pages/camp_01.html",
@@ -967,7 +979,8 @@
       "html": "almanac/pages/tab_blank.html",
       "title": "Blank Pages",
       "category": "Blank Pages",
-      "note": "yours to fill \u00b7 artifacts tucked in"
+      "note": "yours to fill \u00b7 artifacts tucked in",
+      "tabId": "blank"
     },
     {
       "html": "almanac/pages/blank_01.html",
@@ -1032,7 +1045,8 @@
     {
       "html": "almanac/pages/tab_appendix.html",
       "title": "Ledger scraps",
-      "category": "Appendix"
+      "category": "Appendix",
+      "tabId": "appendix"
     },
     {
       "html": "almanac/pages/appendix_01.html",
@@ -1044,6 +1058,134 @@
       "title": "Back cover",
       "category": "",
       "cover": true
+    }
+  ],
+  "tabs": [
+    {
+      "id": "water",
+      "label": "Water",
+      "symbol": "\ud83d\udca7",
+      "feel": "stained \u00b7 urgent \u00b7 heavily corrected",
+      "tape": "duct",
+      "side": "right",
+      "pageIndex": 3
+    },
+    {
+      "id": "fire",
+      "label": "Fire",
+      "symbol": "\ud83d\udd25",
+      "feel": "burn marks \u00b7 tinder sketches",
+      "tape": "electrical",
+      "side": "left",
+      "pageIndex": 15
+    },
+    {
+      "id": "shelter",
+      "label": "Shelter",
+      "symbol": "\u26fa",
+      "feel": "tarp folds \u00b7 cold notes",
+      "tape": "masking",
+      "side": "right",
+      "pageIndex": 23
+    },
+    {
+      "id": "food",
+      "label": "Food",
+      "symbol": "\ud83c\udf3f",
+      "feel": "cautious \u00b7 do not eat",
+      "tape": "painters",
+      "side": "left",
+      "pageIndex": 33
+    },
+    {
+      "id": "medicine",
+      "label": "Medicine",
+      "symbol": "\u271a",
+      "feel": "serious \u00b7 cleaner hand \u00b7 ledger scraps",
+      "tape": "packing",
+      "side": "right",
+      "pageIndex": 41
+    },
+    {
+      "id": "roads",
+      "label": "Roads",
+      "symbol": "\ud83d\udee4",
+      "feel": "maps \u00b7 route warnings",
+      "tape": "hockey",
+      "side": "left",
+      "pageIndex": 51
+    },
+    {
+      "id": "people",
+      "label": "People",
+      "symbol": "\ud83d\udc65",
+      "feel": "trust \u00b7 trade \u00b7 warnings",
+      "tape": "gaffer",
+      "side": "right",
+      "pageIndex": 65
+    },
+    {
+      "id": "weather",
+      "label": "Weather",
+      "symbol": "\ud83c\udf27",
+      "feel": "season signs \u00b7 storm \u00b7 almanac",
+      "tape": "filament",
+      "side": "left",
+      "pageIndex": 83
+    },
+    {
+      "id": "place",
+      "label": "Place",
+      "symbol": "\ud83d\udccd",
+      "feel": "Lake City \u00b7 Kootenai \u00b7 hidden map",
+      "tape": "duct",
+      "side": "right",
+      "pageIndex": 100
+    },
+    {
+      "id": "tools",
+      "label": "Tools",
+      "symbol": "\ud83d\udd27",
+      "feel": "repair hacks \u00b7 trade \u00b7 cordage",
+      "tape": "electrical",
+      "side": "left",
+      "pageIndex": 128
+    },
+    {
+      "id": "signals",
+      "label": "Signals",
+      "symbol": "\ud83d\udce1",
+      "feel": "whistle \u00b7 lantern \u00b7 flags",
+      "tape": "masking",
+      "side": "right",
+      "pageIndex": 138
+    },
+    {
+      "id": "camp",
+      "label": "Camp Games",
+      "symbol": "\ud83c\udfb2",
+      "feel": "companion layer \u00b7 joy \u00b7 memory",
+      "tape": "painters",
+      "side": "left",
+      "pageIndex": 150
+    },
+    {
+      "id": "blank",
+      "label": "Blank Pages",
+      "symbol": "\ud83d\udcdd",
+      "feel": "yours to fill \u00b7 artifacts tucked in",
+      "tape": "packing",
+      "side": "right",
+      "pageIndex": 160
+    },
+    {
+      "id": "appendix",
+      "label": "Ledger scraps",
+      "symbol": "\ud83d\udcce",
+      "feel": "Film / commune medic chapters \u2014 map edition has full spreads",
+      "tape": "filament",
+      "side": "left",
+      "pageIndex": 171
     }
   ]
 }

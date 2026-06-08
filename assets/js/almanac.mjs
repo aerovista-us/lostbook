@@ -698,7 +698,85 @@ function buildPageFlipOptions(dims, flippingTime, hasCover, startPage) {
   };
 }
 
-function initMagazine(PageFlip, bookEl, prevBtn, nextBtn, pageSpecs, chrome) {
+function goToPageIndex(pf, target) {
+  if (!pf || target < 0) return;
+  const n = pf.getPageCount();
+  const page = Math.max(0, Math.min(target, n - 1));
+  if (page === pf.getCurrentPageIndex()) return;
+
+  if (typeof pf.turnToPage === "function") {
+    pf.turnToPage(page);
+    return;
+  }
+  if (typeof pf.flip === "function") {
+    pf.flip(page, "top");
+    return;
+  }
+  const corner = "top";
+  let guard = 0;
+  while (pf.getCurrentPageIndex() < page && guard++ < n + 5) pf.flipNext(corner);
+  guard = 0;
+  while (pf.getCurrentPageIndex() > page && guard++ < n + 5) pf.flipPrev(corner);
+}
+
+function initSideTabs(tabs, getPageFlip, onAfterJump) {
+  const nav = document.getElementById("alm-side-tabs");
+  if (!nav || !tabs?.length) return { updateActive: () => {} };
+
+  nav.replaceChildren();
+  const sorted = [...tabs].sort((a, b) => a.pageIndex - b.pageIndex);
+
+  sorted.forEach((tab, i) => {
+    const btn = document.createElement("button");
+    btn.type = "button";
+    const tape = tab.tape || "duct";
+    const side = tab.side || "right";
+    btn.className = `alm-tape-tab alm-tape-tab--${tape} alm-tape-tab--${side}`;
+    btn.dataset.pageIndex = String(tab.pageIndex);
+    btn.setAttribute("aria-label", tab.feel ? `${tab.label}: ${tab.feel}` : tab.label);
+    btn.title = tab.feel ? `${tab.label} — ${tab.feel}` : tab.label;
+
+    const sym = document.createElement("span");
+    sym.className = "alm-tape-tab__sym";
+    sym.textContent = tab.symbol || "";
+    sym.setAttribute("aria-hidden", "true");
+
+    const label = document.createElement("span");
+    label.className = "alm-tape-tab__label";
+    label.textContent = tab.label || tab.id;
+
+    btn.append(sym, label);
+
+    const pct = sorted.length === 1 ? 50 : 12 + (i / (sorted.length - 1)) * 76;
+    btn.style.top = `${pct}%`;
+
+    btn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const pf = getPageFlip();
+      goToPageIndex(pf, tab.pageIndex);
+      onAfterJump?.(tab.pageIndex);
+    });
+
+    nav.appendChild(btn);
+  });
+
+  function updateActive(currentIndex) {
+    let active = sorted[0];
+    for (const tab of sorted) {
+      if (tab.pageIndex <= currentIndex) active = tab;
+      else break;
+    }
+    for (const btn of nav.querySelectorAll(".alm-tape-tab")) {
+      const isActive = Number(btn.dataset.pageIndex) === active?.pageIndex;
+      btn.classList.toggle("is-active", isActive);
+      btn.setAttribute("aria-current", isActive ? "true" : "false");
+    }
+  }
+
+  return { updateActive };
+}
+
+function initMagazine(PageFlip, bookEl, prevBtn, nextBtn, pageSpecs, chrome, bookTabs = []) {
   const syncChrome = chrome ? makeSyncChrome(pageSpecs, chrome) : null;
   const hasCover =
     pageSpecs.length > 0 &&
@@ -715,9 +793,11 @@ function initMagazine(PageFlip, bookEl, prevBtn, nextBtn, pageSpecs, chrome) {
   let navBound = false;
   let keyBound = false;
   let chinBound = false;
+  let sideTabsApi = null;
 
   const syncAll = (idx, opts = {}) => {
     syncNav(pf, prevBtn, nextBtn);
+    sideTabsApi?.updateActive(idx);
     if (syncChrome) {
       syncChrome(idx, {
         ...opts,
@@ -832,6 +912,13 @@ function initMagazine(PageFlip, bookEl, prevBtn, nextBtn, pageSpecs, chrome) {
 
     const idx = pf.getCurrentPageIndex();
     lastBookPageIndex = idx;
+
+    if (!sideTabsApi && bookTabs.length) {
+      sideTabsApi = initSideTabs(bookTabs, () => pf, (pageIndex) => {
+        lastBookPageIndex = pageIndex;
+        syncAll(pageIndex, { collapseOnPageChange: false });
+      });
+    }
     syncAll(idx, { collapseOnPageChange: false });
 
     pf.on("flip", () => {
@@ -1034,7 +1121,7 @@ async function main() {
 
   const chrome = collectChromeRefs();
   applyShellLabels(manifest, chrome);
-  initMagazine(PageFlip, bookEl, prevBtn, nextBtn, pageSpecs, chrome);
+  initMagazine(PageFlip, bookEl, prevBtn, nextBtn, pageSpecs, chrome, manifest.tabs || []);
 }
 
 main();
