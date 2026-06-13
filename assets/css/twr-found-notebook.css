@@ -1,0 +1,237 @@
+/* =========================================================
+   Things Worth Remembering — Found Notebook v1 Polish Layer
+   TWR-POLISH-001
+   Scoped to TWR pages inside the almanac flip renderer.
+   ========================================================= */
+
+.found-page.twr-page {
+  --twr-paper-base: #d8c79f;
+  --twr-paper-warm: #e1d1a7;
+  --twr-ink-soft: rgba(36, 31, 25, 0.78);
+  --twr-pencil: rgba(45, 43, 39, 0.58);
+  --twr-red-pencil: rgba(121, 37, 29, 0.78);
+  --twr-stamp: rgba(82, 31, 23, 0.64);
+  --twr-tape: rgba(232, 211, 151, 0.46);
+  --twr-hand-main: "Segoe Print", "Bradley Hand", "Comic Sans MS", cursive;
+  --twr-hand-rough: "Segoe Print", "Bradley Hand", cursive;
+  --twr-type-copy: "Courier New", monospace;
+  --twr-readable: Georgia, "Times New Roman", serif;
+  transform: rotate(var(--twr-page-tilt, -0.12deg));
+}
+
+.found-page.twr-page::after {
+  content: "";
+  position: absolute;
+  inset: -2%;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at var(--twr-stain-x, 78%) var(--twr-stain-y, 16%), rgba(76, 47, 18, 0.14), transparent 13%),
+    radial-gradient(circle at 22% 88%, rgba(36, 27, 18, 0.1), transparent 18%),
+    linear-gradient(110deg, transparent 0 42%, rgba(255, 255, 255, 0.06) 43%, transparent 47%);
+  opacity: var(--twr-wear-opacity, 0.72);
+  mix-blend-mode: multiply;
+}
+
+.found-page.twr-page > * {
+  position: relative;
+  z-index: 1;
+}
+
+.found-page.twr-page .found-body.twr-body p,
+.found-page.twr-page .twr-body p {
+  color: var(--twr-ink-soft);
+}
+
+.found-page.twr-page .found-body.twr-body p:nth-of-type(2n) {
+  transform: rotate(-0.05deg);
+}
+
+.found-page.twr-page .found-body.twr-body p:nth-of-type(3n) {
+  transform: rotate(0.06deg);
+}
+
+.found-page.twr-page .found-margin.twr-margin-note {
+  max-width: 18rem;
+  margin-left: auto;
+  font-family: var(--twr-hand-rough);
+  font-size: 0.88rem;
+  transform: rotate(var(--twr-note-tilt, -1deg));
+  border-left: 2px solid rgba(48, 43, 34, 0.24);
+  padding-left: 0.55rem;
+}
+
+.found-page.twr-page .twr-margin-note.is-warning {
+  color: var(--twr-red-pencil);
+  border-left-color: rgba(121, 37, 29, 0.36);
+}
+
+.found-page.twr-page .twr-hand-main {
+  font-family: var(--twr-hand-main);
+}
+
+.found-page.twr-page .twr-hand-rough {
+  font-family: var(--twr-hand-rough);
+  transform: rotate(-0.25deg);
+}
+
+.found-page.twr-page .twr-copy-type {
+  font-family: var(--twr-type-copy);
+  letter-spacing: 0.04em;
+  filter: contrast(0.92);
+}
+
+.found-page.twr-page .twr-carrier-mark {
+  display: inline-block;
+  font-family: var(--twr-hand-rough);
+  color: var(--twr-pencil);
+  transform: rotate(var(--twr-mark-tilt, -1.5deg));
+}
+
+.found-page.twr-page .twr-red-pencil {
+  color: var(--twr-red-pencil);
+  font-family: var(--twr-hand-rough);
+}
+
+.found-page.twr-page .twr-stamp {
+  display: inline-flex;
+  margin-bottom: 0.45rem;
+  padding: 0.2rem 0.5rem;
+  color: var(--twr-stamp);
+  border: 2px solid currentColor;
+  border-radius: 0.18rem;
+  font-family: var(--twr-type-copy);
+  font-size: 0.62rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transform: rotate(var(--twr-stamp-tilt, -2deg));
+  opacity: 0.76;
+  mix-blend-mode: multiply;
+}
+
+.found-page.twr-page .twr-stamp.is-copied {
+  --twr-stamp-tilt: 2.5deg;
+}
+
+.found-page.twr-page .twr-scrap {
+  position: relative;
+  margin: 1rem 0;
+  padding: 0.85rem;
+  background: linear-gradient(180deg, #e8d8ad, #d8c394);
+  border: 1px solid rgba(67, 46, 23, 0.22);
+  box-shadow: inset 0 0 14px rgba(59, 40, 19, 0.1), 0 4px 12px rgba(0, 0, 0, 0.14);
+  clip-path: polygon(0 2%, 98% 0, 100% 18%, 99% 100%, 72% 98%, 44% 100%, 0 97%);
+}
+
+.found-page.twr-page .twr-scrap.twr-tape::before,
+.found-page.twr-page .twr-scrap.twr-tape::after {
+  content: "";
+  position: absolute;
+  width: 3.5rem;
+  height: 1rem;
+  background: var(--twr-tape);
+  border: 1px solid rgba(109, 86, 41, 0.18);
+  pointer-events: none;
+}
+
+.found-page.twr-page .twr-scrap.twr-tape::before {
+  top: -0.55rem;
+  left: 0.9rem;
+  transform: rotate(-5deg);
+}
+
+.found-page.twr-page .twr-scrap.twr-tape::after {
+  right: 0.8rem;
+  bottom: -0.5rem;
+  transform: rotate(4deg);
+}
+
+.found-page.twr-page .twr-locker-card {
+  position: relative;
+  margin: 1rem 0;
+  padding: 0.9rem 1rem;
+  background: linear-gradient(180deg, #decda3, #cab27d);
+  border: 1px solid rgba(52, 39, 21, 0.32);
+  box-shadow: inset 0 0 20px rgba(64, 44, 21, 0.14), 0 6px 16px rgba(0, 0, 0, 0.18);
+  transform: rotate(var(--twr-card-tilt, 0.6deg));
+}
+
+.found-page.twr-page .twr-locker-card::before {
+  content: "";
+  position: absolute;
+  top: 0.35rem;
+  left: 50%;
+  width: 0.55rem;
+  height: 0.55rem;
+  border-radius: 999px;
+  background: #5f4a32;
+  transform: translateX(-50%);
+}
+
+.found-page.twr-page .fp-foot.twr-page-footer {
+  margin-top: 1.25rem;
+  padding-top: 0.65rem;
+  border-top: 1px dashed rgba(52, 39, 21, 0.24);
+  font-family: var(--twr-type-copy);
+  font-size: 0.62rem;
+  letter-spacing: 0.04em;
+  color: rgba(52, 39, 21, 0.58);
+}
+
+.found-page.twr-page.twr-page--original {
+  --twr-page-tilt: -0.12deg;
+  --twr-wear-opacity: 0.68;
+}
+
+.found-page.twr-page.twr-page--copied {
+  --twr-page-tilt: 0.18deg;
+  --twr-wear-opacity: 0.86;
+  filter: grayscale(0.06) contrast(0.97);
+}
+
+.found-page.twr-page.twr-page--copied .found-body {
+  font-family: var(--twr-type-copy);
+}
+
+.found-page.twr-page.twr-page--relic {
+  --twr-page-tilt: 0.34deg;
+  --twr-wear-opacity: 0.92;
+}
+
+.found-page.twr-page.twr-page--correction,
+.found-page.twr-page.twr-page--mistakes {
+  --twr-stain-x: 18%;
+  --twr-stain-y: 72%;
+  --twr-wear-opacity: 0.94;
+}
+
+.found-page.twr-page.twr-page--people {
+  --twr-wear-opacity: 0.7;
+}
+
+.found-page.twr-page.twr-page--signals {
+  --twr-stain-x: 86%;
+  --twr-stain-y: 64%;
+}
+
+.found-page.twr-page.twr-page--travel {
+  --twr-stain-x: 74%;
+  --twr-stain-y: 18%;
+}
+
+@media (max-width: 720px) {
+  .found-page.twr-page {
+    transform: none;
+  }
+
+  .found-page.twr-page .found-margin.twr-margin-note {
+    max-width: 100%;
+    margin-left: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .found-page.twr-page {
+    transform: none;
+  }
+}
