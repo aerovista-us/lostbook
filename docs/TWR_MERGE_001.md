@@ -45,7 +45,9 @@ curl -s http://127.0.0.1:8765/almanac-manifest.json | python3 -c \
 
 ```
 TWR-MERGE-001 ✅
-→ TWR-PUBLISH-001 (manual git push to GitHub Pages)
+→ TWR-PUBLISH-001 ✅ (git push → GitHub Pages)
 → TWR-DROP-002 (grow to 12/12)
 → M3 only when Frontier HTTPS/WSS is actually needed
 ```
+
+See [TWR_PUBLISH_001.md](TWR_PUBLISH_001.md).
