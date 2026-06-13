@@ -1,7 +1,7 @@
 # TWR-POLISH-001 — Found Notebook v1 Polish Pass
 
 **Date:** 2026-06-13  
-**Status:** Complete (002 modular + relic card layout deployed)  
+**Status:** Complete (003 page-type paper + card edges deployed)  
 **Scope:** Style/copy polish only — no new pages  
 **Reader target:** `Apps/lostbook`  
 **Expected manifest:** 186 total pages / 12 TWR pages  
@@ -34,6 +34,7 @@
 | HTML | `twr-page`, `twr-body`, `twr-margin-note`, stamps, scraps, locker cards on 12 pages |
 | HTML 001b | `fp-stain` divs + `twr-field-mark` on all 12 pages; stamps on 8 core pages |
 | HTML 002 | `found-kicker`, `found-source`, `found-symbol-grid`, `found-taped-note`, `twr-relic-card` blocks |
+| CSS 003 | Photocopy-yellow copied pages, parchment relic pages, torn/charred relic cards + coffee rings |
 | Export | Preview generator emits `twr-page` base classes for future merges |
 
 ## Verification
