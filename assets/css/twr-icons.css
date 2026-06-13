@@ -30,6 +30,25 @@
   --icon-tilt: -0.8deg;
 }
 
+/* Page header category icons — larger field sketches on title spreads */
+.found-head .twr-icon,
+.found-tab .twr-icon,
+.fp-cat.found-tab .twr-icon {
+  width: 2.65rem;
+  height: 2.65rem;
+  margin-right: 0.5rem;
+  vertical-align: middle;
+  --icon-tilt: -1.4deg;
+  opacity: 0.92;
+}
+
+.found-head .found-tab,
+.found-head .fp-cat.found-tab {
+  gap: 0.35rem;
+  align-items: center;
+  margin-bottom: 0.25rem;
+}
+
 .twr-icon--lg {
   width: 5rem;
   height: 5rem;
