@@ -464,6 +464,22 @@
       "note": "maps · route warnings"
     },
     {
+      "html": "almanac/pages/twr_page_travel_mark_only_you.html",
+      "title": "Leave a mark only you will read",
+      "category": "Travel",
+      "note": "TWR v1 · R. Vale · original",
+      "twrPageId": "twr_page_travel_mark_only_you",
+      "twrMerge": "TWR-MERGE-002"
+    },
+    {
+      "html": "almanac/pages/twr_page_mistakes_shortcut.html",
+      "title": "I trusted the shortcut",
+      "category": "Mistakes",
+      "note": "TWR v1 · unknown carrier · correction",
+      "twrPageId": "twr_page_mistakes_shortcut",
+      "twrMerge": "TWR-MERGE-002"
+    },
+    {
       "html": "almanac/pages/tab_people.html",
       "title": "People",
       "category": "People",
@@ -571,6 +587,14 @@
       "title": "Apology without repair is noise",
       "category": "People",
       "note": "trust · trade · warnings"
+    },
+    {
+      "html": "almanac/pages/twr_page_people_warmth_not_story.html",
+      "title": "Share warmth, not your whole story",
+      "category": "People",
+      "note": "TWR v1 · trader · original",
+      "twrPageId": "twr_page_people_warmth_not_story",
+      "twrMerge": "TWR-MERGE-002"
     },
     {
       "html": "almanac/pages/tab_weather.html",
@@ -979,6 +1003,14 @@
       "note": "whistle · lantern · flags"
     },
     {
+      "html": "almanac/pages/twr_page_signals_three_knocks.html",
+      "title": "Three knocks means come in",
+      "category": "Signals",
+      "note": "TWR v1 · later hand · copied",
+      "twrPageId": "twr_page_signals_three_knocks",
+      "twrMerge": "TWR-MERGE-002"
+    },
+    {
       "html": "almanac/pages/tab_camp.html",
       "title": "Camp Games",
       "category": "Camp Games",
@@ -1253,11 +1285,32 @@
     }
   ],
   "twrMerge": {
-    "id": "TWR-MERGE-001",
-    "mergedAt": "2026-06-13T06:14:34.885Z",
+    "id": "TWR-MERGE-002",
+    "mergedAt": "2026-06-13T19:47:47.473Z",
     "dropId": "twr_found_notebook_v1",
-    "pageCount": 8,
+    "pageCount": 12,
+    "addedThisMerge": 4,
     "source": "artlocalized-api/data/exports/twr/lostbook-preview/",
-    "note": "Found Notebook v1 manual reader merge — no auto GitHub Pages publish"
-  }
+    "note": "Found Notebook v1 complete (12/12) in ACOS reader — push to GitHub for live update"
+  },
+  "twrMerges": [
+    {
+      "id": "TWR-MERGE-001",
+      "mergedAt": "2026-06-13T06:14:34.885Z",
+      "dropId": "twr_found_notebook_v1",
+      "pageCount": 8,
+      "source": "artlocalized-api/data/exports/twr/lostbook-preview/",
+      "note": "Found Notebook v1 manual reader merge — no auto GitHub Pages publish"
+    },
+    {
+      "id": "TWR-MERGE-002",
+      "mergedAt": "2026-06-13T19:47:47.473Z",
+      "dropId": "twr_found_notebook_v1",
+      "workOrder": "TWR-DROP-002",
+      "pageCount": 4,
+      "cumulativeTwrPages": 12,
+      "source": "artlocalized-api/data/exports/twr/lostbook-preview/",
+      "note": "DROP-002 optional-tab pages — manual merge, no auto-publish"
+    }
+  ]
 }
