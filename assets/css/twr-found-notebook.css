@@ -328,3 +328,151 @@
     transform: none;
   }
 }
+
+/* =========================================================
+   TWR-POLISH-002 — in-page relic card + modular book layout
+   ========================================================= */
+
+.found-page.twr-page .twr-relic-card {
+  position: relative;
+  margin: 1rem 0 0.75rem;
+  padding: 0.75rem 0.85rem 0.85rem;
+  background:
+    linear-gradient(175deg, rgba(232, 216, 173, 0.92) 0%, rgba(208, 188, 136, 0.88) 55%, rgba(196, 170, 117, 0.9) 100%);
+  border: 1px solid rgba(67, 46, 23, 0.38);
+  box-shadow:
+    inset 0 0 28px rgba(59, 40, 19, 0.14),
+    0 6px 16px rgba(0, 0, 0, 0.14);
+  clip-path: polygon(0 1%, 98% 0, 100% 4%, 99% 96%, 95% 100%, 3% 99%, 0 94%);
+  transform: rotate(var(--twr-card-tilt, 0.35deg));
+}
+
+.found-page.twr-page .twr-relic-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 82% 18%, rgba(76, 47, 18, 0.16), transparent 22%),
+    radial-gradient(circle at 12% 88%, rgba(36, 27, 18, 0.12), transparent 18%);
+  mix-blend-mode: multiply;
+}
+
+.found-page.twr-page .twr-relic-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+.found-page.twr-page .twr-relic-card__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 0.35rem;
+  font-family: "Courier New", monospace;
+  font-size: 0.58rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(52, 39, 21, 0.72);
+}
+
+.found-page.twr-page .twr-relic-card__no {
+  font-weight: 700;
+}
+
+.found-page.twr-page .twr-relic-card__title {
+  margin: 0 0 0.55rem;
+  font-family: "Courier New", monospace;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  line-height: 1.35;
+  color: rgba(36, 31, 25, 0.9);
+  border-bottom: 1px solid rgba(92, 62, 34, 0.22);
+  padding-bottom: 0.35rem;
+}
+
+.found-page.twr-page .twr-relic-card__meta {
+  display: grid;
+  gap: 0.25rem;
+  margin: 0 0 0.55rem;
+  font-family: "Courier New", monospace;
+  font-size: 0.62rem;
+  letter-spacing: 0.04em;
+}
+
+.found-page.twr-page .twr-relic-card__meta > div {
+  display: grid;
+  grid-template-columns: 5.5rem 1fr;
+  gap: 0.35rem;
+}
+
+.found-page.twr-page .twr-relic-card__meta dt {
+  margin: 0;
+  text-transform: uppercase;
+  color: rgba(92, 62, 34, 0.72);
+}
+
+.found-page.twr-page .twr-relic-card__meta dd {
+  margin: 0;
+  color: rgba(36, 31, 25, 0.82);
+}
+
+.found-page.twr-page .twr-relic-card__use {
+  margin: 0 0 0.35rem;
+  font-size: 0.82rem;
+  line-height: 1.4;
+}
+
+.found-page.twr-page .twr-relic-card__meaning {
+  margin: 0;
+  font-family: var(--twr-hand-rough);
+  font-size: 0.95rem;
+  line-height: 1.35;
+  color: var(--twr-pencil);
+}
+
+.found-page.twr-page .twr-relic-checklist {
+  margin: 0.75rem 0;
+  padding: 0.65rem 0.75rem;
+  list-style: none;
+  font-family: "Courier New", monospace;
+  font-size: 0.72rem;
+  line-height: 1.55;
+  background: rgba(255, 248, 230, 0.45);
+  border: 1px dashed rgba(72, 45, 22, 0.28);
+}
+
+.found-page.twr-page .twr-relic-checklist li {
+  display: flex;
+  gap: 0.45rem;
+  align-items: baseline;
+}
+
+.found-page.twr-page .twr-check {
+  flex: 0 0 auto;
+  font-size: 0.85rem;
+  color: rgba(92, 62, 34, 0.65);
+}
+
+/* Let canonical modular blocks breathe on TWR pages */
+.found-page.twr-page .found-kicker {
+  margin-top: 0;
+}
+
+.found-page.twr-page .found-symbol-grid {
+  margin-top: 0.5rem;
+}
+
+.found-page.twr-page .found-taped-note {
+  background: rgba(212, 196, 140, 0.48);
+  border-color: rgba(107, 68, 35, 0.32);
+}
+
+.found-page.twr-page.fp-type--copied .found-title {
+  font-family: var(--mono, "Courier New", monospace);
+}
+
+.found-page.twr-page.fp-type--relic .found-body {
+  font-style: normal;
+}
+

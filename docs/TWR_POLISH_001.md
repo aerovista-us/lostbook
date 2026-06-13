@@ -1,7 +1,7 @@
 # TWR-POLISH-001 — Found Notebook v1 Polish Pass
 
 **Date:** 2026-06-13  
-**Status:** Complete (001b visibility pass deployed)  
+**Status:** Complete (002 modular + relic card layout deployed)  
 **Scope:** Style/copy polish only — no new pages  
 **Reader target:** `Apps/lostbook`  
 **Expected manifest:** 186 total pages / 12 TWR pages  
@@ -20,6 +20,7 @@
 - `Apps/lostbook/almanac/pages/twr_page_*.html` (12 pages)
 - `Apps/lostbook/scripts/twr-polish-001.mjs`
 - `Apps/lostbook/scripts/twr-polish-001b.mjs` (visible strengthen pass)
+- `Apps/lostbook/scripts/twr-layout-v2.mjs` (canonical modular layout + relic cards)
 - `services/artlocalized-api/src/lib/twrLostbookExport.js` (polish class hooks)
 - `Apps/lostbook/docs/TWR_WORK_ORDERS.md`
 - `services/artlocalized-api/docs/TWR_WORK_ORDERS.md`
@@ -32,6 +33,7 @@
 | CSS 001b | Left-edge accent, `TWR · v1` corner mark, stronger stains, highlighted footer badge |
 | HTML | `twr-page`, `twr-body`, `twr-margin-note`, stamps, scraps, locker cards on 12 pages |
 | HTML 001b | `fp-stain` divs + `twr-field-mark` on all 12 pages; stamps on 8 core pages |
+| HTML 002 | `found-kicker`, `found-source`, `found-symbol-grid`, `found-taped-note`, `twr-relic-card` blocks |
 | Export | Preview generator emits `twr-page` base classes for future merges |
 
 ## Verification
