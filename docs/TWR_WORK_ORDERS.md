@@ -37,7 +37,7 @@
 | **TWR-PUBLISH-001** | Live GitHub Pages (8 pages) | ✅ Complete | 2026-06-13 | [live almanac](https://aerovista-us.github.io/lostbook/almanac.html) |
 | **TWR-DROP-002** | Grow to 12/12 target | ✅ Complete | 2026-06-13 | +4 optional-tab pages |
 | **TWR-MERGE-002** | Manual reader merge (+4 pages) | ✅ Complete | 2026-06-13 | 12 TWR pages in ACOS reader |
-| **TWR-PUBLISH-002** | Live GitHub Pages (12 pages) | 🔄 Pending | — | `git push` lostbook `main` after MERGE-002 review |
+| **TWR-PUBLISH-002** | Live GitHub Pages (12 pages) | 🔄 Pushed | 2026-06-13 | `git push` done · Pages rebuild pending |
 
 ---
 
@@ -77,4 +77,6 @@
 | TWR-MERGE-001 | `Apps/lostbook/docs/TWR_MERGE_001.md` |
 | TWR-MERGE-002 | `Apps/lostbook/docs/TWR_MERGE_002.md` |
 | TWR-PUBLISH-001 | `Apps/lostbook/docs/TWR_PUBLISH_001.md` |
+| TWR-PUBLISH-002 | `Apps/lostbook/docs/TWR_PUBLISH_002.md` |
+| Master ledger | `Apps/lostbook/docs/TWR_WORK_ORDERS.md` |
 | M2 wire-up | `services/artlocalized-api/docs/M2_TWR_BUILDER_WIREUP.md` |
