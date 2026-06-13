@@ -1,0 +1,118 @@
+{
+  "version": "TWR-DRAWN-ICON-PACK-001",
+  "style": "hand-drawn survival notebook pencil/pen field sketch",
+  "icons": {
+    "⛺": {
+      "id": "camp",
+      "title": "Effective camp setup",
+      "file": "assets/twr-icons/svg/twr-icon-camp.svg",
+      "className": "twr-icon--camp",
+      "alt": "Hand-drawn camp setup diagram showing tent placement, wind direction, drainage, and fire distance."
+    },
+    "🔥": {
+      "id": "fire-lay",
+      "title": "Fire lay",
+      "file": "assets/twr-icons/svg/twr-icon-fire-lay.svg",
+      "className": "twr-icon--fire-lay",
+      "alt": "Hand-drawn fire lay diagram showing tinder, kindling, and fuel layers."
+    },
+    "💧": {
+      "id": "water-filter",
+      "title": "Water filter layers",
+      "file": "assets/twr-icons/svg/twr-icon-water-filter.svg",
+      "className": "twr-icon--water-filter",
+      "alt": "Hand-drawn water filtering diagram with cloth, charcoal, sand, and gravel layers."
+    },
+    "🧭": {
+      "id": "travel",
+      "title": "Direction and travel",
+      "file": "assets/twr-icons/svg/twr-icon-travel.svg",
+      "className": "twr-icon--travel",
+      "alt": "Hand-drawn compass with shadow direction note."
+    },
+    "🪨": {
+      "id": "trail-mark",
+      "title": "Hidden trail mark",
+      "file": "assets/twr-icons/svg/twr-icon-trail-mark.svg",
+      "className": "twr-icon--trail-mark",
+      "alt": "Hand-drawn trail marker stones with a secret mark only you know."
+    },
+    "🚪": {
+      "id": "knock-code",
+      "title": "Knock code",
+      "file": "assets/twr-icons/svg/twr-icon-knock-code.svg",
+      "className": "twr-icon--knock-code",
+      "alt": "Hand-drawn door knock code diagram."
+    },
+    "⚠️": {
+      "id": "warning",
+      "title": "Warning",
+      "file": "assets/twr-icons/svg/twr-icon-warning.svg",
+      "className": "twr-icon--warning",
+      "alt": "Hand-drawn warning triangle field mark."
+    },
+    "🤝": {
+      "id": "trade-people",
+      "title": "Trade first",
+      "file": "assets/twr-icons/svg/twr-icon-trade-people.svg",
+      "className": "twr-icon--trade-people",
+      "alt": "Hand-drawn two hands with trade-first caution."
+    },
+    "🪢": {
+      "id": "knot",
+      "title": "Knot diagram",
+      "file": "assets/twr-icons/svg/twr-icon-knot.svg",
+      "className": "twr-icon--knot",
+      "alt": "Hand-drawn survival knot diagram."
+    },
+    "🪓": {
+      "id": "tool-axe",
+      "title": "Tool / axe",
+      "file": "assets/twr-icons/svg/twr-icon-tool-axe.svg",
+      "className": "twr-icon--tool-axe",
+      "alt": "Hand-drawn axe angle with safe swing zone."
+    },
+    "🍲": {
+      "id": "shared-warmth",
+      "title": "Shared warmth",
+      "file": "assets/twr-icons/svg/twr-icon-shared-warmth.svg",
+      "className": "twr-icon--shared-warmth",
+      "alt": "Hand-drawn soup bowl — offer warmth, not identity."
+    },
+    "❌": {
+      "id": "mistake",
+      "title": "Do not repeat",
+      "file": "assets/twr-icons/svg/twr-icon-mistake.svg",
+      "className": "twr-icon--mistake",
+      "alt": "Hand-drawn crossed-out bad setup correction mark."
+    },
+    "🏠": {
+      "id": "camp",
+      "title": "Shelter / camp",
+      "file": "assets/twr-icons/svg/twr-icon-camp.svg",
+      "className": "twr-icon--camp",
+      "alt": "Hand-drawn shelter camp setup diagram."
+    },
+    "🛤": {
+      "id": "travel",
+      "title": "Travel / direction",
+      "file": "assets/twr-icons/svg/twr-icon-travel.svg",
+      "className": "twr-icon--travel",
+      "alt": "Hand-drawn travel direction mark."
+    },
+    "📡": {
+      "id": "knock-code",
+      "title": "Signals",
+      "file": "assets/twr-icons/svg/twr-icon-knock-code.svg",
+      "className": "twr-icon--knock-code",
+      "alt": "Hand-drawn signal knock code diagram."
+    },
+    "👥": {
+      "id": "trade-people",
+      "title": "People / trust",
+      "file": "assets/twr-icons/svg/twr-icon-trade-people.svg",
+      "className": "twr-icon--trade-people",
+      "alt": "Hand-drawn people trust mark — trade first."
+    }
+  }
+}

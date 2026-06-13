@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Knock code diagram">
+  <defs>
+    <style>
+      .ink { fill: none; stroke: #3a3228; stroke-linecap: round; stroke-linejoin: round; }
+      .faint { opacity: 0.42; }
+      .label { font: 6px "Segoe Print", "Bradley Hand", cursive; fill: #4a4034; }
+    </style>
+  </defs>
+  <!-- door frame -->
+  <path class="ink" d="M34 24 L34 96 L86 96 L86 24" stroke-width="1.6"/>
+  <path class="ink" d="M50 96 L50 40 Q60 34 70 40 L70 96" stroke-width="1.4"/>
+  <!-- knocker -->
+  <circle class="ink" cx="62" cy="58" r="4" stroke-width="1.2"/>
+  <!-- knock marks -->
+  <path class="ink" d="M18 44 L22 44 M18 48 L22 48 M18 52 L22 52" stroke-width="1.8"/>
+  <text class="label" x="8" y="42">3 = in</text>
+  <path class="ink faint" d="M18 60 L22 60 M18 64 L22 64" stroke-width="1.8"/>
+  <text class="label" x="8" y="58">2 = wait</text>
+  <path class="ink faint" d="M18 76 L22 76" stroke-width="1.8"/>
+  <text class="label" x="8" y="74">1 = who?</text>
+  <!-- note -->
+  <text class="label" x="36" y="18">relay cabin</text>
+  <text class="label" x="36" y="108">teach before fog</text>
+  <path class="ink faint" d="M92 50 L104 50 L104 70 L92 70" stroke-width="0.8"/>
+</svg>

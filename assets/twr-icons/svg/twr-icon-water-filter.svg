@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Water filter layers">
+  <defs>
+    <style>
+      .ink { fill: none; stroke: #3a3228; stroke-linecap: round; stroke-linejoin: round; }
+      .faint { opacity: 0.4; }
+      .label { font: 6px "Segoe Print", "Bradley Hand", cursive; fill: #4a4034; }
+      .layer { fill: rgba(58,50,40,0.08); stroke: #3a3228; stroke-width: 0.8; }
+    </style>
+  </defs>
+  <!-- jar -->
+  <path class="ink" d="M42 28 L42 24 Q60 18 78 24 L78 28" stroke-width="1.3"/>
+  <path class="ink" d="M38 28 L38 92 Q60 98 82 92 L82 28" stroke-width="1.5"/>
+  <!-- layers -->
+  <rect class="layer" x="42" y="34" width="36" height="10" rx="1"/>
+  <text class="label" x="44" y="41">cloth</text>
+  <rect class="layer" x="42" y="48" width="36" height="10" rx="1"/>
+  <text class="label" x="44" y="55">charcoal</text>
+  <rect class="layer" x="42" y="62" width="36" height="10" rx="1"/>
+  <text class="label" x="44" y="69">sand</text>
+  <rect class="layer" x="42" y="76" width="36" height="10" rx="1"/>
+  <text class="label" x="44" y="83">gravel</text>
+  <!-- drip -->
+  <path class="ink" d="M60 92 Q58 100 60 106 Q62 100 60 92" stroke-width="1.2"/>
+  <path class="ink faint" d="M54 108 Q60 112 66 108" stroke-width="1"/>
+  <text class="label" x="68" y="104">drip slow</text>
+  <!-- drop in -->
+  <path class="ink" d="M60 14 Q58 20 60 24 Q62 20 60 14 Z" stroke-width="1"/>
+  <text class="label" x="66" y="20">pour</text>
+</svg>

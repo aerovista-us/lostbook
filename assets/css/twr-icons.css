@@ -1,0 +1,101 @@
+/* TWR-DRAWN-ICON-PACK-001 — hand-drawn survival notebook icons */
+
+.twr-icon {
+  display: inline-block;
+  width: 3.25rem;
+  height: 3.25rem;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  filter:
+    sepia(0.25)
+    contrast(0.9)
+    brightness(0.86);
+  opacity: 0.88;
+  transform: rotate(var(--icon-tilt, -1.2deg));
+  flex-shrink: 0;
+}
+
+.twr-icon--sm {
+  width: 1.75rem;
+  height: 1.75rem;
+}
+
+.twr-icon--tab {
+  width: 1.35rem;
+  height: 1.35rem;
+  margin-right: 0.3rem;
+  vertical-align: -0.2em;
+  --icon-tilt: -0.8deg;
+}
+
+.twr-icon--lg {
+  width: 5rem;
+  height: 5rem;
+}
+
+.twr-icon--camp { background-image: url("../twr-icons/svg/twr-icon-camp.svg"); }
+.twr-icon--fire-lay { background-image: url("../twr-icons/svg/twr-icon-fire-lay.svg"); }
+.twr-icon--water-filter { background-image: url("../twr-icons/svg/twr-icon-water-filter.svg"); }
+.twr-icon--travel { background-image: url("../twr-icons/svg/twr-icon-travel.svg"); }
+.twr-icon--trail-mark { background-image: url("../twr-icons/svg/twr-icon-trail-mark.svg"); }
+.twr-icon--knock-code { background-image: url("../twr-icons/svg/twr-icon-knock-code.svg"); }
+.twr-icon--warning { background-image: url("../twr-icons/svg/twr-icon-warning.svg"); }
+.twr-icon--trade-people { background-image: url("../twr-icons/svg/twr-icon-trade-people.svg"); }
+.twr-icon--knot { background-image: url("../twr-icons/svg/twr-icon-knot.svg"); }
+.twr-icon--tool-axe { background-image: url("../twr-icons/svg/twr-icon-tool-axe.svg"); }
+.twr-icon--shared-warmth { background-image: url("../twr-icons/svg/twr-icon-shared-warmth.svg"); }
+.twr-icon--mistake { background-image: url("../twr-icons/svg/twr-icon-mistake.svg"); }
+
+.twr-icon-card {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.85rem;
+  align-items: start;
+  margin: 1rem 0;
+  padding: 0.75rem 0.85rem;
+  border: 1px dashed rgba(52, 39, 21, 0.28);
+  background: rgba(238, 220, 171, 0.22);
+  transform: rotate(var(--card-tilt, -0.3deg));
+}
+
+.twr-icon-card small {
+  display: block;
+  margin-top: 0.25rem;
+  font-family: var(--twr-hand-rough, "Segoe Print", cursive);
+  color: rgba(45, 38, 28, 0.62);
+}
+
+/* Tab headers: drawn icon + label, hide duplicate emoji text */
+.found-tab .twr-emoji-source,
+.fp-cat .twr-emoji-source {
+  display: none;
+}
+
+.found-tab,
+.fp-cat.found-tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.15rem;
+}
+
+/* Side tape tabs */
+.alm-tape-tab__sym .twr-icon {
+  width: 1.1rem;
+  height: 1.1rem;
+  margin: 0 auto;
+  display: block;
+  --icon-tilt: 0deg;
+}
+
+.alm-tape-tab__sym .twr-emoji-source {
+  display: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .twr-icon,
+  .twr-icon-card {
+    transform: none;
+  }
+}

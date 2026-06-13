@@ -3,6 +3,8 @@
  * HTML leaves from almanac-manifest.json (built by tools/build_almanac.py).
  */
 
+import { replaceEmojiIconsInHtml, renderTabSymbol } from "./twr-icons.mjs";
+
 const PAGE_FLIP_VENDOR = new URL("../vendor/page-flip.browser.min.js", import.meta.url).href;
 const PAGE_FLIP_CDN =
   "https://cdn.jsdelivr.net/npm/page-flip@2.0.7/dist/js/page-flip.browser.min.js";
@@ -457,7 +459,7 @@ async function loadHtmlContent(spec) {
   if (spec.htmlCached != null) return spec.htmlCached;
   const res = await fetch(spec.resolved, { cache: "force-cache" });
   if (!res.ok) throw new Error(`${spec.src} → HTTP ${res.status}`);
-  spec.htmlCached = await res.text();
+  spec.htmlCached = replaceEmojiIconsInHtml(await res.text());
   return spec.htmlCached;
 }
 
@@ -738,7 +740,7 @@ function initSideTabs(tabs, getPageFlip, onAfterJump) {
 
     const sym = document.createElement("span");
     sym.className = "alm-tape-tab__sym";
-    sym.textContent = tab.symbol || "";
+    renderTabSymbol(sym, tab.symbol || "");
     sym.setAttribute("aria-hidden", "true");
 
     const label = document.createElement("span");

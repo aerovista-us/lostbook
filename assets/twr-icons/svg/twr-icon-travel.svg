@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Compass direction">
+  <defs>
+    <style>
+      .ink { fill: none; stroke: #3a3228; stroke-linecap: round; stroke-linejoin: round; }
+      .faint { opacity: 0.42; }
+      .label { font: 6px "Segoe Print", "Bradley Hand", cursive; fill: #4a4034; }
+    </style>
+  </defs>
+  <!-- compass body -->
+  <circle class="ink" cx="60" cy="58" r="28" stroke-width="1.5"/>
+  <circle class="ink faint" cx="60" cy="58" r="22" stroke-width="0.8"/>
+  <!-- needle -->
+  <path class="ink" d="M60 36 L64 58 L60 80 L56 58 Z" stroke-width="1.4"/>
+  <path class="ink faint" d="M60 40 L60 76" stroke-width="0.8"/>
+  <text class="label" x="54" y="34">N</text>
+  <!-- shadow stick -->
+  <path class="ink faint" d="M24 88 L48 88" stroke-width="2"/>
+  <path class="ink" d="M24 88 L24 72" stroke-width="1.2"/>
+  <path class="ink" d="M20 88 L52 88 M48 88 L54 82" stroke-width="1"/>
+  <text class="label" x="14" y="96">shadow</text>
+  <text class="label" x="14" y="103">= noon line</text>
+  <!-- route tick -->
+  <path class="ink faint" d="M88 40 L98 52 L92 64" stroke-width="1.1" stroke-dasharray="2 2"/>
+  <text class="label" x="86" y="74">mark only</text>
+  <text class="label" x="86" y="81">you read</text>
+</svg>

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Warning mark">
+  <defs>
+    <style>
+      .ink { fill: none; stroke: #3a3228; stroke-linecap: round; stroke-linejoin: round; }
+      .faint { opacity: 0.4; }
+      .label { font: 6px "Segoe Print", "Bradley Hand", cursive; fill: #4a4034; }
+    </style>
+  </defs>
+  <!-- rough triangle -->
+  <path class="ink" d="M60 22 L94 92 L26 92 Z" stroke-width="1.8"/>
+  <path class="ink faint" d="M58 24 L62 24 M28 90 L32 88 M90 88 L86 90" stroke-width="0.8"/>
+  <!-- exclamation -->
+  <path class="ink" d="M60 42 L60 68" stroke-width="2.2"/>
+  <circle class="ink" cx="60" cy="78" r="2.5" stroke-width="1.2" fill="#3a3228"/>
+  <!-- margin note -->
+  <text class="label" x="18" y="108">stop · look</text>
+  <path class="ink faint" d="M12 100 L20 108 M16 96 L24 104" stroke-width="0.6"/>
+</svg>

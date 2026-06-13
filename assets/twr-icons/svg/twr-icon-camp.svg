@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Camp setup diagram">
+  <defs>
+    <style>
+      .ink { fill: none; stroke: #3a3228; stroke-linecap: round; stroke-linejoin: round; }
+      .faint { opacity: 0.45; }
+      .label { font: 6px "Segoe Print", "Bradley Hand", cursive; fill: #4a4034; }
+    </style>
+  </defs>
+  <rect width="120" height="120" fill="none"/>
+  <!-- ground / raised site -->
+  <path class="ink faint" d="M12 88 Q60 78 108 88" stroke-width="1.2"/>
+  <path class="ink" d="M18 86 L102 86" stroke-width="1.4"/>
+  <!-- drainage trench -->
+  <path class="ink" d="M22 90 Q42 94 58 90 Q74 86 96 92" stroke-width="1.1" stroke-dasharray="2 2"/>
+  <text class="label" x="24" y="98">drainage first</text>
+  <!-- tree line -->
+  <path class="ink faint" d="M8 62 L14 48 L20 62 M18 62 L24 44 L30 62 M28 62 L34 50 L40 62" stroke-width="1"/>
+  <!-- tent -->
+  <path class="ink" d="M38 86 L60 52 L82 86 Z" stroke-width="1.6"/>
+  <path class="ink" d="M60 52 L60 86" stroke-width="1"/>
+  <path class="ink faint" d="M48 86 L60 70 L72 86" stroke-width="0.9"/>
+  <!-- stakes angled -->
+  <path class="ink" d="M36 86 L32 94 M82 86 L88 93 M60 86 L60 96" stroke-width="1.2"/>
+  <text class="label" x="34" y="50">door away</text>
+  <text class="label" x="34" y="57">from wind</text>
+  <!-- wind arrow -->
+  <path class="ink" d="M88 34 L58 34 M58 34 L64 30 M58 34 L64 38" stroke-width="1.5"/>
+  <text class="label" x="90" y="32">wind</text>
+  <!-- fire downwind -->
+  <path class="ink" d="M92 74 Q94 68 96 74 Q98 70 100 74 Q98 80 96 76 Q94 80 92 74 Z" stroke-width="1"/>
+  <path class="ink faint" d="M90 80 L102 80" stroke-width="1"/>
+  <text class="label" x="86" y="88">fire downwind</text>
+  <!-- crosshatch -->
+  <path class="ink faint" d="M14 72 L22 80 M18 68 L26 76" stroke-width="0.6"/>
+</svg>

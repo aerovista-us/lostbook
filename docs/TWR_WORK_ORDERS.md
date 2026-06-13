@@ -12,7 +12,8 @@
 | Found Notebook v1 content | ✅ Complete (12/12) |
 | Found Notebook v1 reader lane | ✅ Complete |
 | Live reader (lostbook) | ✅ 12 TWR pages on GitHub Pages |
-| Artifact polish (v1) | ✅ TWR-POLISH-001 |
+| Artifact polish (v1) | ✅ TWR-POLISH-001 / 002 |
+| Drawn icon pack (v1) | ✅ TWR-DRAWN-ICON-PACK-001 |
 | Frontier HTTPS (M3) | ⏸ Parked |
 
 **Found Notebook v1 lane:** `AVCC intake → artlocalized-api → preview bridge → 12/12 drop → lostbook merge → GitHub Pages → polish`
@@ -43,6 +44,7 @@
 | **TWR-MERGE-002** | Manual reader merge (+4 pages) | ✅ Complete | 2026-06-13 | 12 TWR in ACOS reader |
 | **TWR-PUBLISH-002** | Live GitHub Pages (12 pages) | ✅ Complete | 2026-06-13 | Live manifest **186 / 12** verified |
 | **TWR-POLISH-001** | v1 artifact style polish | ✅ Complete | 2026-06-13 | CSS layer + 12 page wrappers |
+| **TWR-DRAWN-ICON-PACK-001** | Hand-drawn notebook icons | ✅ Complete | 2026-06-13 | 12 SVG icons + reader swap layer |
 
 ---
 
@@ -95,4 +97,5 @@ Optional: spot-check polished pages locally, then begin TWR-DROP-003 only when a
 | TWR-PUBLISH-001 | `Apps/lostbook/docs/TWR_PUBLISH_001.md` |
 | TWR-PUBLISH-002 | `Apps/lostbook/docs/TWR_PUBLISH_002.md` |
 | TWR-POLISH-001 | `Apps/lostbook/docs/TWR_POLISH_001.md` |
+| TWR-DRAWN-ICON-PACK-001 | `Apps/lostbook/docs/TWR_DRAWN_ICON_PACK_001.md` |
 | M2 wire-up | `services/artlocalized-api/docs/M2_TWR_BUILDER_WIREUP.md` |

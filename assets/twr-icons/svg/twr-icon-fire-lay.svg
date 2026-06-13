@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Fire lay diagram">
+  <defs>
+    <style>
+      .ink { fill: none; stroke: #3a3228; stroke-linecap: round; stroke-linejoin: round; }
+      .faint { opacity: 0.42; }
+      .label { font: 6px "Segoe Print", "Bradley Hand", cursive; fill: #4a4034; }
+    </style>
+  </defs>
+  <!-- stone ring -->
+  <ellipse class="ink faint" cx="60" cy="78" rx="34" ry="10" stroke-width="1"/>
+  <path class="ink faint" d="M30 78 Q34 74 38 78 M82 78 Q86 74 90 78" stroke-width="1"/>
+  <!-- fuel logs -->
+  <path class="ink" d="M38 74 L82 74 M42 70 L78 70" stroke-width="2"/>
+  <text class="label" x="44" y="68">fuel</text>
+  <!-- kindling teepee -->
+  <path class="ink" d="M48 70 L60 48 L72 70 M54 70 L60 54 L66 70" stroke-width="1.3"/>
+  <text class="label" x="74" y="58">kindling</text>
+  <!-- tinder nest -->
+  <path class="ink" d="M52 70 Q60 64 68 70 Q60 76 52 70 Z" stroke-width="1.2"/>
+  <text class="label" x="38" y="58">tinder</text>
+  <!-- flame -->
+  <path class="ink" d="M58 46 Q60 36 62 46 Q64 40 66 48 Q62 54 60 50 Q58 54 58 46 Z" stroke-width="1.4"/>
+  <!-- air arrow -->
+  <path class="ink faint" d="M24 56 L40 56 M40 56 L36 52 M40 56 L36 60" stroke-width="1.2"/>
+  <text class="label" x="14" y="54">air in</text>
+  <path class="ink faint" d="M14 68 L22 76 M18 64 L26 72" stroke-width="0.6"/>
+</svg>

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Axe safe swing">
+  <defs>
+    <style>
+      .ink { fill: none; stroke: #3a3228; stroke-linecap: round; stroke-linejoin: round; }
+      .faint { opacity: 0.4; }
+      .label { font: 6px "Segoe Print", "Bradley Hand", cursive; fill: #4a4034; }
+    </style>
+  </defs>
+  <!-- safe zone arc -->
+  <path class="ink faint" d="M24 88 Q60 20 96 88" stroke-width="1" stroke-dasharray="3 2"/>
+  <text class="label" x="44" y="28">swing zone</text>
+  <!-- axe -->
+  <path class="ink" d="M58 88 L58 44" stroke-width="2"/>
+  <path class="ink" d="M58 44 L78 36 L82 48 L62 56 Z" stroke-width="1.4"/>
+  <!-- angle guide -->
+  <path class="ink" d="M58 88 L74 72" stroke-width="1.2"/>
+  <text class="label" x="76" y="70">angle</text>
+  <!-- feet clear -->
+  <path class="ink faint" d="M40 96 L52 96 M68 96 L80 96" stroke-width="1.5"/>
+  <text class="label" x="38" y="108">clear feet</text>
+  <path class="ink faint" d="M18 60 L26 68" stroke-width="0.6"/>
+</svg>
